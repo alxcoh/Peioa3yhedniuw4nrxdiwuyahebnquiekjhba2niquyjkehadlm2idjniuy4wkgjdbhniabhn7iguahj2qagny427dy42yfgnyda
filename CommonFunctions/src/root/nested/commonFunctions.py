@@ -25,7 +25,7 @@ def rollDice(num,sides):
 
 def chanceOfHappen(a, b):
     if a>b:
-        print 'Must be frst parameter less then second parameter for chance of something happening'
+        print 'Must be first parameter less then second parameter for chance of something happening'
         return None
     randy=random.randrange(b)
     if randy<a:
