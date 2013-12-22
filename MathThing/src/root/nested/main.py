@@ -222,4 +222,4 @@ for x  in range(1, logicNum):
     percentIncrease=100*((Decimal(aCount[0])/Decimal(aCount[x]))-1)
     print 'Advantage good strategy gives over strategy ', x+1, ': ', percentIncrease, '%'
 #random message
-#poooo
+#poooow9as9s9s9s9s9s9
