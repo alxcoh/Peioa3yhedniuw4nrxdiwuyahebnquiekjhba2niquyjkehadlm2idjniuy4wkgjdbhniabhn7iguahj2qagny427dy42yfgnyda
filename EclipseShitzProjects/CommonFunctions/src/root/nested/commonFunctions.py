@@ -36,6 +36,4 @@ def chanceOfHappen(a, b):
 def percentChange(a, b): #percentage increase or decrease from a to b
     changy=Decimal(b)/Decimal(a)
     return (changy-1)*100
-#testyefnuiewhd87o
-#testy
-#pooop gabriel
+#assholes and titties
