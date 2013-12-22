@@ -22,4 +22,17 @@ def rollDice(num,sides):
     for i in range(num):
         total+=random.randrange(sides)+1
     return total
+<<<<<<< HEAD
 #pooo
+=======
+
+def chanceOfHappen(a, b):
+    if a>b:
+        print 'Must be frst parameter less then second parameter for chance of something happening'
+        return None
+    randy=random.randrange(b)
+    if randy<a:
+        return 1 #event did happen
+    else: 
+        return 0 #event did not happen
+>>>>>>> e2d60e5268476637dd32f037cc65905c845d8ab6
