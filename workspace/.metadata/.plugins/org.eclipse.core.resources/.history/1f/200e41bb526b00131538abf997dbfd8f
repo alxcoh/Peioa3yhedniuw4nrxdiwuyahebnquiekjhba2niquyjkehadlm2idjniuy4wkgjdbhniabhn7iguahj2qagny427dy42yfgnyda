@@ -38,4 +38,3 @@ def percentChange(a, b): #percentage increase or decrease from a to b
     return (changy-1)*100
 #testy
 #this is our chat line does this work?
-#penis balls asshole
