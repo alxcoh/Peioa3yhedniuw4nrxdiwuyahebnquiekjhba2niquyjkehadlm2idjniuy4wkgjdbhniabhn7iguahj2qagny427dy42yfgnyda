@@ -32,3 +32,9 @@ def chanceOfHappen(a, b):
         return 1 #event did happen
     else: 
         return 0 #event did not happen
+    
+def percentIncrease(a, b): #percentage increase or decrease from a to b
+    changy=Decimal(b/a)
+    return 1-changy
+
+print percentIncrease(1, 2)
