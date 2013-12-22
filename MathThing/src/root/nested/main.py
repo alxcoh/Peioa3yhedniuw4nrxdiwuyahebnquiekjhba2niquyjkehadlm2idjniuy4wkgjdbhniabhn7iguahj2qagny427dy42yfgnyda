@@ -223,4 +223,8 @@ for x  in range(1, logicNum):
     print 'Advantage good strategy gives over strategy ', x+1, ': ', percentIncrease, '%'
 #random message
 #poooo
+<<<<<<< HEAD
 #poosd
+=======
+#test
+>>>>>>> a0e3aac85b0310d58723541c954e1ba27468f78e
