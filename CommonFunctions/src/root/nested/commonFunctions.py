@@ -22,6 +22,9 @@ def rollDice(num,sides):
     for i in range(num):
         total+=random.randrange(sides)+1
     return total
+<<<<<<< HEAD
+#pooo
+=======
 
 def chanceOfHappen(a, b):
     if a>b:
@@ -32,9 +35,13 @@ def chanceOfHappen(a, b):
         return 1 #event did happen
     else: 
         return 0 #event did not happen
+<<<<<<< HEAD
     
 def percentIncrease(a, b): #percentage increase or decrease from a to b
     changy=Decimal(b/a)
     return 1-changy
 
 print percentIncrease(1, 2)
+=======
+>>>>>>> e2d60e5268476637dd32f037cc65905c845d8ab6
+>>>>>>> 4d8678244d13fea0df85561ee6cb6fa137f9d18a
