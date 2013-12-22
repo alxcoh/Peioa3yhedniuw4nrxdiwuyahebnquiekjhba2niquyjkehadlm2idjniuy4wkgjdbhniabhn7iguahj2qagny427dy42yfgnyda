@@ -1,0 +1,111 @@
+import random
+import decimal
+from decimal import *
+class Character:
+    def __init__(self, ordNum, prob):
+        self.ordNum=ordNum
+        self.prob=prob
+        self.state=1 #1 is alive 0 is dead
+    def shoot(self, a): #a is who is being shot
+        randy=random.randrange(self.prob)
+        if randy==0:
+            #print 'shot connected from', self.ordNum
+            a.state=0
+            #print a.ordNum, ' is dead'
+            return 1 #person killed
+        else:
+            #print 'shot missed from', self.ordNum
+            return 0 #person alive
+    def turn(self, b, c):
+        if self.ordNum==0:
+            if b.state==1 and c.state==1:
+                return None
+            elif b.state==0 and c.state==0:
+                return 10 #game over charA wins
+            elif b.state==0:
+                if self.shoot(c)==1:
+                    return c.ordNum
+            elif c.state==0:
+                if self.shoot(b)==1:
+                    return b.ordNum
+            else:
+                return None
+        elif self.ordNum==1 or self.ordNum==2:
+            if c.state==1:
+                if self.shoot(c)==1:
+                    return c.ordNum
+            elif c.state==0 and b.state==0:
+                return self.ordNum+10 #a won
+            elif c.state==0 and b.state==1:
+                if self.shoot(b)==1:
+                    return b.ordNum
+
+charA=Character(0, 3)
+charB=Character(1, 2)
+charC=Character(2, 1)
+aCount=0
+bCount=0
+cCount=0
+gameOn=1
+county=0;
+def itr():
+    resA=100
+    resB=100
+    resC=100
+    '''says whos alive and dead
+    print charA.state
+    print charB.state
+    print charC.state'''
+    if charA.state==1:
+        #print 'a turn'
+        resA=charA.turn(charB, charC)
+        if resA==10:
+            #print "Player A wins"
+            return 0, 0
+    if charB.state==1:
+        #print 'b turn'
+        resB=charB.turn(charA, charC)
+        if resB==11:
+            #print "Player B wins"
+            return 0, 1
+    if charC.state==1:
+        #print 'c turn'
+        resC=charC.turn(charA, charB)
+        if resC==12:
+            #print "Player C wins"
+            return 0, 2
+    return 1, 100
+cycleTimes=100000000
+for i in range(cycleTimes):
+    gameOn=1
+    charA.state=1
+    charB.state=1
+    charC.state=1
+    #print '************************'
+    while gameOn==1:
+        res=0
+        addr=0
+        try:
+            res, addr=itr()
+        except TypeError:
+            print 'exception found'
+            res=0
+            addr=100
+        gameOn=res
+        if addr==0:
+            aCount+=1
+            county+=1
+        if addr==1:
+            bCount+=1
+            county+=1
+        if addr==2:
+            cCount+=1
+            county+=1
+        elif addr==100:
+            continue
+        if county%100000==0:
+            print county
+print '\nA won ',aCount, ' times, ', Decimal(aCount*100)/Decimal(cycleTimes), '% of the time'
+print '\nB won ',bCount, ' times, ', Decimal(bCount*100)/Decimal(cycleTimes), '% of the time'
+print '\nC won ',cCount, ' times, ', Decimal(cCount*100)/Decimal(cycleTimes), '% of the time'
+    

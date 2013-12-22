@@ -1,0 +1,15 @@
+import decimal
+from decimal import *
+timer=10**3
+x=1*timer
+a=x*timer
+b=1/pow(2, 0.5)*timer
+print b*timer
+c=0.25*timer
+for i in range(100):
+    y=a*timer
+    a=((a+b)/2)*timer
+    b=pow(b*y, 0.5)*timer
+    c=c-x*(pow(a-y, 2))*timer
+    x=2*x*timer
+    print pow(a+b, 2)/(4*c)*timer

@@ -1,0 +1,23 @@
+-- VERSION_3
+-- START DISKCACHE
+/Users/alxcoh/Documents/Projects/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/CommonFunctions/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+root.nested.__init__|0|/Users/alxcoh/Documents/Projects/workspace/CommonFunctions/src/root/nested/__init__.py
+root.nested.commonFunctions|0|/Users/alxcoh/Documents/Projects/workspace/CommonFunctions/src/root/nested/commonFunctions.py
+root.__init__|0|/Users/alxcoh/Documents/Projects/workspace/CommonFunctions/src/root/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=root.nested.commonFunctions
+-- END DICTIONARY
+-- START TREE 1
+5
+cha|1|chanceOfHappen!10@
+dim|1|dimensionList!10@
+per|1|percentChange!10@
+pri|1|print2DArray!10@
+rol|1|rollDice!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

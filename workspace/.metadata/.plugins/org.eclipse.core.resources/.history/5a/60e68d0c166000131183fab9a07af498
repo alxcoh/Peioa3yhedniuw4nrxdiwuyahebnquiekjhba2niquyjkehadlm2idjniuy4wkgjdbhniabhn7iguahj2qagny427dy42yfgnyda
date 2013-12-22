@@ -1,0 +1,13 @@
+import decimal
+from decimal import *
+x=1
+a=x
+b=(1/pow(2, 0.5))
+c=0.25
+for i in range(100):
+    y=decimal.Decimal(a)
+    a=decimal.Decimal((a+b)/2)
+    b=decimal.Decimal(pow(b*y, 0.5))
+    c=decimal.Decimal(c-x*(pow(a-y, 2)))
+    x=decimal.Decimal(2*x)
+    print decimal.Decimal(pow(a+b, 2)/(4*c))

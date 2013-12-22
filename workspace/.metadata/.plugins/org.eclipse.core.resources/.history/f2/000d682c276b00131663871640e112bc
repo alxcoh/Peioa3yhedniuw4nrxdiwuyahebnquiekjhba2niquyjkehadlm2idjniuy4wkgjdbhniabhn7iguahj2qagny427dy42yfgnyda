@@ -1,0 +1,12 @@
+'''
+Created on Dec 22, 2013
+
+@author: alxcoh
+'''
+
+def xDimensionArray(dimensions, values):
+    a=[[0 for x in range(values[0])] for i in range(values[1])]
+    for i in range(dimensions-1):
+        a=[a for i in range(values[i])]
+    return a
+        

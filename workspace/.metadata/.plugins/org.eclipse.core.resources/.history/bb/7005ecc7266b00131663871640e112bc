@@ -1,0 +1,7 @@
+'''
+Created on Dec 21, 2013
+
+@author: alxcoh
+'''
+from functionFile import *
+print xDimensionArray(3, [2, 5, 4])

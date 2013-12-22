@@ -1,0 +1,19 @@
+-- VERSION_3
+-- START DISKCACHE
+/Users/alxcoh/Documents/Projects/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/EuclideanAlgorithm/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+root.nested.__init__|0|/Users/alxcoh/Documents/Projects/workspace/EuclideanAlgorithm/src/root/nested/__init__.py
+root.nested.Alg|0|/Users/alxcoh/Documents/Projects/workspace/EuclideanAlgorithm/src/root/nested/Alg.py
+root.__init__|0|/Users/alxcoh/Documents/Projects/workspace/EuclideanAlgorithm/src/root/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=root.nested.Alg
+-- END DICTIONARY
+-- START TREE 1
+1
+gcd|1|gcd!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

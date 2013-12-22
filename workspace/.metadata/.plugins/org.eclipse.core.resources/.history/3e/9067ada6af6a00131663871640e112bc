@@ -1,0 +1,4 @@
+c=raw_input('Enter the ciphertext: ')
+lengthy=c.length
+extraneous=c[lengthy]
+print extraneous

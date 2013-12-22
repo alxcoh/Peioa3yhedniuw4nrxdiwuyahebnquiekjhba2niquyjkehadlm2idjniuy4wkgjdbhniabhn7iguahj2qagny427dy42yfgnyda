@@ -1,0 +1,12 @@
+'''
+Created on Dec 21, 2013
+
+@author: alxcoh
+'''
+from os import path
+import sys
+sys.path.append(path.abspath('.../CommonFunctions'))
+
+from CommonFunctions.src.root.nested import *
+a=[[0 for i in range(2)], [1 for i in range(5)]]
+print a

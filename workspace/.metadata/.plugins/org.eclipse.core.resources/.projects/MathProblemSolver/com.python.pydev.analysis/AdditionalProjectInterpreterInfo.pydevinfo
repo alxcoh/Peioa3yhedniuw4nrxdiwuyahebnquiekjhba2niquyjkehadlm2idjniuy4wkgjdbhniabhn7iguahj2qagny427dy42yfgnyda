@@ -1,0 +1,39 @@
+-- VERSION_3
+-- START DISKCACHE
+/Users/alxcoh/Documents/Projects/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/MathProblemSolver/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+root.nested.__init__|0|/Users/alxcoh/Documents/Projects/workspace/MathProblemSolver/src/root/nested/__init__.py
+root.nested.main|0|/Users/alxcoh/Documents/Projects/workspace/MathProblemSolver/src/root/nested/main.py
+root.__init__|0|/Users/alxcoh/Documents/Projects/workspace/MathProblemSolver/src/root/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+1=root.nested.main
+3=Character.__init__
+2=Character
+-- END DICTIONARY
+-- START TREE 1
+12
+aco|2|aCount!11@aCounter!11@
+add|1|addr!11@
+bco|1|bCount!11@
+cco|1|cCount!11@
+cha|4|Character!9@charB!11@charC!11@charA!11@
+cou|1|county!11@
+cyc|1|cycleTimes!11@
+gam|2|gameOn!11@gameCount!11@
+itr|1|itr!10@
+log|1|logicNum!11@
+per|1|percentIncrease!11@
+res|1|res!11@
+-- END TREE
+-- START TREE 2
+7
+__i|1|__init__!2&10@
+log|5|logicA3!2&10@logicA1!2&10@logicA4!2&10@logicA2!2&10@logicA5!2&10@
+ord|1|ordNum!3&11@
+pro|1|prob!3&11@
+sho|1|shoot!2&10@
+sta|1|state!3&11@
+tur|1|turn!2&10@
+-- END TREE

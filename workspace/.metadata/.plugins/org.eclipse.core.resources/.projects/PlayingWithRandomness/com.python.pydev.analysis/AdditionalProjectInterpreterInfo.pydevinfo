@@ -1,0 +1,20 @@
+-- VERSION_3
+-- START DISKCACHE
+/Users/alxcoh/Documents/Projects/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/PlayingWithRandomness/com.python.pydev.analysis/v1_indexcache
+.v1_indexcache
+root.nested.randomness|0|/Users/alxcoh/Documents/Projects/workspace/PlayingWithRandomness/src/root/nested/randomness.py
+root.nested.__init__|0|/Users/alxcoh/Documents/Projects/workspace/PlayingWithRandomness/src/root/nested/__init__.py
+root.__init__|0|/Users/alxcoh/Documents/Projects/workspace/PlayingWithRandomness/src/root/__init__.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=root.nested.randomness
+-- END DICTIONARY
+-- START TREE 1
+2
+pri|1|primeCheck!10@
+sta|1|start!11@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE
