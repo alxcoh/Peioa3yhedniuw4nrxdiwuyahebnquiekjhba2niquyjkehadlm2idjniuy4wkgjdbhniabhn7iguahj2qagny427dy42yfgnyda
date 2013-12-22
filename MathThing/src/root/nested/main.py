@@ -221,5 +221,8 @@ for x  in range(1, logicNum):
     print '\nDiffernce in percent won between good strategy and strategy ', x+1, ': ', Decimal(aCount[0]*100)/Decimal(cycleTimes)-aCounter[x], '%'
     percentIncrease=100*((Decimal(aCount[0])/Decimal(aCount[x]))-1)
     print 'Advantage good strategy gives over strategy ', x+1, ': ', percentIncrease, '%'
+<<<<<<< HEAD
     
     #MMMAMTTTG AIHUS S SIS ID SDSI
+=======
+>>>>>>> e0d75e8113b446aee867a291b56b86fbe6f9b0c0
