@@ -1,9 +1,0 @@
-'''
-Created on Dec 21, 2013
-
-@author: alxcoh
-'''
-from functionFile import *
-
-a=dimensionList([5, 3])
-print a[2]

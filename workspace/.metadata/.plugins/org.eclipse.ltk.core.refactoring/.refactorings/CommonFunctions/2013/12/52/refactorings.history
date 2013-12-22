@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;CommonFunctions/src/root/nested/functionFile.py&apos; to &apos;commonFunctions.py&apos;" description="Rename resource &apos;functionFile.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/root/nested/functionFile.py" name="commonFunctions.py" stamp="1387733768243" updateReferences="true"/>
-</session>

@@ -1,3 +1,0 @@
-c=12345678
-c=str(c)
-print c[c.length]

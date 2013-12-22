@@ -1,7 +1,0 @@
-'''
-Created on Dec 21, 2013
-
-@author: alxcoh
-'''
-from functionFile import *
-print xDimensionArray(2, [2,2])

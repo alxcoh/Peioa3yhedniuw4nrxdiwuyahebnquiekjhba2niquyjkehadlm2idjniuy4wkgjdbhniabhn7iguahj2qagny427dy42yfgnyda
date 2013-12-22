@@ -1,2 +1,0 @@
-a=['hello', 2, 'gabriel', 3.123]
-print a
