@@ -27,5 +27,6 @@ getcontext().prec = countUpTo
 print 'Must go up to ', (countUpTo/14)+(14*3), ' cycles'
 pi=chudnovskyBig((countUpTo/14)+(14*3))
 print "Length: ", getcontext().prec, ", ", pi
+#bla
 
     
