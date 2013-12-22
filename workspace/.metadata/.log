@@ -9727,11 +9727,16 @@ Binding(COMMAND+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	com.python.pydev.contexts.window,,,system)
+<<<<<<< HEAD
 !SESSION 2013-12-22 16:44:49.759 -----------------------------------------------
+=======
+!SESSION 2013-12-22 16:42:14.392 -----------------------------------------------
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 eclipse.buildId=4.3.0.M20130911-1000
 java.version=1.6.0_65
 java.vendor=Apple Inc.
 BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+<<<<<<< HEAD
 Framework arguments:  -product org.eclipse.epp.package.standard.product -product org.eclipse.epp.package.standard.product -keyring /Users/gbeharmarks/.eclipse_keyring -showlocation
 Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -data /Users/gbeharmarks/Desktop/ProjectsAlex/workspace -product org.eclipse.epp.package.standard.product -keyring /Users/gbeharmarks/.eclipse_keyring -showlocation
 
@@ -9834,12 +9839,27 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 !ENTRY org.eclipse.jface 2 0 2013-12-22 16:45:07.618
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2013-12-22 16:45:07.618
+=======
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/alxcoh/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/alxcoh/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-12-22 16:42:35.736
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2013-12-22 16:42:36.087
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-22 16:42:36.087
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 !MESSAGE A conflict occurred for ALT+COMMAND+R:
 Binding(ALT+COMMAND+R,
 	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
 		,
 		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7e11ba6f,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@271c537f,
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -9847,11 +9867,16 @@ Binding(ALT+COMMAND+R,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
 		Rename the selected element,
 		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3de70e12,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@34adcae8,
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,cocoa,system)
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.osgi 2 0 2013-12-22 16:45:30.442
 !MESSAGE While loading class "org.eclipse.team.internal.ccvs.core.util.SyncFileChangeListener$1", thread "Thread[Worker-9,5,main]" timed out waiting (5041ms) for thread "Thread[Worker-12,5,main]" to finish starting bundle "org.eclipse.team.cvs.core_3.3.500.v20130515-2011 [210]". To avoid deadlock, thread "Thread[Worker-9,5,main]" is proceeding but "org.eclipse.team.internal.ccvs.core.util.SyncFileChangeListener$1" may not be fully initialized.
 !STACK 0
@@ -9961,12 +9986,21 @@ org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
 !ENTRY org.eclipse.jface 2 0 2013-12-22 16:45:51.172
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
 !SUBENTRY 1 org.eclipse.jface 2 0 2013-12-22 16:45:51.172
+=======
+!ENTRY org.eclipse.jface 2 0 2013-12-22 16:43:15.472
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2013-12-22 16:43:15.472
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 !MESSAGE A conflict occurred for COMMAND+SHIFT+T:
 Binding(COMMAND+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@269ea618,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5c04e49f,
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -9974,7 +10008,11 @@ Binding(COMMAND+SHIFT+T,
 	ParameterizedCommand(Command(org.python.pydev.editor.actions.pyShowBrowser,Python Show Global Tokens (Editor),
 		Python Show Global Tokens (Editor),
 		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@79aa8576,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@453db1eb,
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.python.pydev.ui.editor.scope,,,system)
@@ -9982,7 +10020,11 @@ Binding(COMMAND+SHIFT+T,
 	ParameterizedCommand(Command(com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench,Python Show Global Tokens (Global),
 		Python Show Global Tokens (Global),
 		Category(org.python.pydev.ui.category.source,PyDev - Editor,PyDev editor category,true),
+<<<<<<< HEAD
 		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a204461,
+=======
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@556bded0,
+>>>>>>> a6fec568dc9fce54edac7b4be906e967a0fc9f4d
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	com.python.pydev.contexts.window,,,system)

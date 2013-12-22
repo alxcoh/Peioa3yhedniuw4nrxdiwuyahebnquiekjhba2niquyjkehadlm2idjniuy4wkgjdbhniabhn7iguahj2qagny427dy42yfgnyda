@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_S_1jUGQtEeOe-_TivfLNKA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_S_2KYGQtEeOe-_TivfLNKA" bindingContexts="_S_9fOWQtEeOe-_TivfLNKA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;commonFunctions.py&quot; tooltip=&quot;/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py&quot;>&#xA;&lt;persistable uri=&quot;file:/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;commonFunctions.py&quot; tooltip=&quot;CommonFunctions/src/root/nested/commonFunctions.py&quot;>&#xA;&lt;persistable path=&quot;/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;__init__.py&quot; tooltip=&quot;CommonFunctions/src/root/__init__.py&quot;>&#xA;&lt;persistable path=&quot;/CommonFunctions/src/root/__init__.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;main.py&quot; tooltip=&quot;TestProject/src/root/nested/main.py&quot;>&#xA;&lt;persistable path=&quot;/TestProject/src/root/nested/main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;MainFile.py&quot; tooltip=&quot;RSAImplement/src/root/nested/MainFile.py&quot;>&#xA;&lt;persistable path=&quot;/RSAImplement/src/root/nested/MainFile.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;commonFunctions.py&quot; tooltip=&quot;TestProject/src/root/nested/commonFunctions.py&quot;>&#xA;&lt;persistable path=&quot;/TestProject/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;main.py&quot; tooltip=&quot;MathProblemSolver/src/root/nested/main.py&quot;>&#xA;&lt;persistable path=&quot;/MathProblemSolver/src/root/nested/main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;__init__.py&quot; tooltip=&quot;MathProblemSolver/src/root/nested/__init__.py&quot;>&#xA;&lt;persistable path=&quot;/MathProblemSolver/src/root/nested/__init__.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;__init__.py&quot; tooltip=&quot;MathProblemSolver/src/root/__init__.py&quot;>&#xA;&lt;persistable path=&quot;/MathProblemSolver/src/root/__init__.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;main.py&quot; tooltip=&quot;RSACommunication/src/root/nested/main.py&quot;>&#xA;&lt;persistable path=&quot;/RSACommunication/src/root/nested/main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;Main.py&quot; tooltip=&quot;Multithreading/src/root/nested/Main.py&quot;>&#xA;&lt;persistable path=&quot;/Multithreading/src/root/nested/Main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;commonFunctions.py&quot; tooltip=&quot;CommonFunctions/src/root/nested/commonFunctions.py&quot;>&#xA;&lt;persistable path=&quot;/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;commonFunctions.py&quot; tooltip=&quot;/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py&quot;>&#xA;&lt;persistable uri=&quot;file:/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;__init__.py&quot; tooltip=&quot;CommonFunctions/src/root/__init__.py&quot;>&#xA;&lt;persistable path=&quot;/CommonFunctions/src/root/__init__.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;main.py&quot; tooltip=&quot;TestProject/src/root/nested/main.py&quot;>&#xA;&lt;persistable path=&quot;/TestProject/src/root/nested/main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;MainFile.py&quot; tooltip=&quot;RSAImplement/src/root/nested/MainFile.py&quot;>&#xA;&lt;persistable path=&quot;/RSAImplement/src/root/nested/MainFile.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;commonFunctions.py&quot; tooltip=&quot;TestProject/src/root/nested/commonFunctions.py&quot;>&#xA;&lt;persistable path=&quot;/TestProject/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;main.py&quot; tooltip=&quot;MathProblemSolver/src/root/nested/main.py&quot;>&#xA;&lt;persistable path=&quot;/MathProblemSolver/src/root/nested/main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;__init__.py&quot; tooltip=&quot;MathProblemSolver/src/root/nested/__init__.py&quot;>&#xA;&lt;persistable path=&quot;/MathProblemSolver/src/root/nested/__init__.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;__init__.py&quot; tooltip=&quot;MathProblemSolver/src/root/__init__.py&quot;>&#xA;&lt;persistable path=&quot;/MathProblemSolver/src/root/__init__.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;main.py&quot; tooltip=&quot;RSACommunication/src/root/nested/main.py&quot;>&#xA;&lt;persistable path=&quot;/RSACommunication/src/root/nested/main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.python.pydev.editor.PythonEditor&quot; name=&quot;Main.py&quot; tooltip=&quot;Multithreading/src/root/nested/Main.py&quot;>&#xA;&lt;persistable path=&quot;/Multithreading/src/root/nested/Main.py&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_S_2KYGQtEeOe-_TivfLNKA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_S_2KYWQtEeOe-_TivfLNKA" label="%trimmedwindow.label.eclipseSDK" x="79" y="72" width="1245" height="825">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_S_2KYGQtEeOe-_TivfLNKA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_S_2KYWQtEeOe-_TivfLNKA" label="%trimmedwindow.label.eclipseSDK" x="79" y="25" width="1245" height="825">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workingSets/>"/>
@@ -43,12 +43,12 @@
           <tags>persp.showIn:org.eclipse.ui.views.ResourceNavigator</tags>
           <tags>persp.showIn:org.python.pydev.navigator.view</tags>
           <tags>persp.showIn:org.eclipse.ui.views.ContentOutline</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_S_2KZGQtEeOe-_TivfLNKA" selectedElement="_S_2KZ2QtEeOe-_TivfLNKA" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_S_2KZGQtEeOe-_TivfLNKA" selectedElement="_S_2KZWQtEeOe-_TivfLNKA" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_S_2KZWQtEeOe-_TivfLNKA" elementId="topLeft" containerData="2600" selectedElement="_S_2KZmQtEeOe-_TivfLNKA">
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_S_2KZmQtEeOe-_TivfLNKA" elementId="org.python.pydev.navigator.view" ref="_S_3YvGQtEeOe-_TivfLNKA"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_S_2KZ2QtEeOe-_TivfLNKA" containerData="7400" selectedElement="_S_2KaGQtEeOe-_TivfLNKA">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_S_2KZ2QtEeOe-_TivfLNKA" containerData="7400" selectedElement="_S_2KaWQtEeOe-_TivfLNKA">
               <children xsi:type="advanced:Placeholder" xmi:id="_S_2KaGQtEeOe-_TivfLNKA" elementId="org.eclipse.ui.editorss" containerData="5989" ref="_S_2x1mQtEeOe-_TivfLNKA">
                 <tags>Maximized</tags>
               </children>
@@ -84,25 +84,24 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_S_2x1mQtEeOe-_TivfLNKA" elementId="org.eclipse.ui.editorss" selectedElement="_S_2x12QtEeOe-_TivfLNKA">
-      <children xsi:type="basic:PartStack" xmi:id="_S_2x12QtEeOe-_TivfLNKA" elementId="PartStack@53077f45" selectedElement="_j8SToGtPEeO0rs27jkEY8A">
-        <children xsi:type="basic:Part" xmi:id="_1vIn0GsbEeO0rs27jkEY8A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="root (MathProblemSolver.src)" iconURI="platform:/plugin/org.python.pydev/icons/python_file.gif" tooltip="MathProblemSolver/src/root/__init__.py" closeable="true">
+      <children xsi:type="basic:PartStack" xmi:id="_S_2x12QtEeOe-_TivfLNKA" elementId="PartStack@53077f45" selectedElement="_yBwEYGtNEeO0rs27jkEY8A">
+        <children xsi:type="basic:Part" xmi:id="_1vIn0GsbEeO0rs27jkEY8A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="root" iconURI="platform:/plugin/org.python.pydev/icons/python_file.gif" tooltip="MathProblemSolver/src/root/__init__.py" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/MathProblemSolver/src/root/__init__.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.python.pydev.editor.PythonEditor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_yBwEYGtNEeO0rs27jkEY8A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="commonFunctions (workspace.CommonFunctions.src.root.nested)" iconURI="platform:/plugin/org.python.pydev/icons/python_file.gif" tooltip="CommonFunctions/src/root/nested/commonFunctions.py" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1074&quot; selectionTopPixel=&quot;169&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1081&quot; selectionTopPixel=&quot;189&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.python.pydev.editor.PythonEditor</tags>
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_j8SToGtPEeO0rs27jkEY8A" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="commonFunctions (Projects.CommonFunctions.src.root.nested)" iconURI="platform:/plugin/org.python.pydev/icons/python_file.gif" tooltip="/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; uri=&quot;file:/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;945&quot; selectionTopPixel=&quot;184&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.python.pydev.editor.PythonEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.ide.FileStoreEditorInputFactory&quot; uri=&quot;file:/Users/alxcoh/Documents/Projects/CommonFunctions/src/root/nested/commonFunctions.py&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;566&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.python.pydev.editor.PythonEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -243,9 +242,10 @@
       <toolbar xmi:id="_S_3Yu2QtEeOe-_TivfLNKA" elementId="org.eclipse.pde.runtime.LogView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_S_3YvGQtEeOe-_TivfLNKA" elementId="org.python.pydev.navigator.view" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="PyDev Package Explorer" iconURI="platform:/plugin/org.python.pydev/icons/pydev_package_explorer.gif" tooltip="Workspace" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;1&quot; currentWorkingSetName=&quot;Aggregate for window 1385620249659&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/CommonFunctions&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/CommonFunctions/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/CommonFunctions/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/CommonFunctions/src/root/nested&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/MathProblemSolver&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/MathProblemSolver/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/MathProblemSolver/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/MathProblemSolver/src/root/nested&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/Multithreading&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/Multithreading/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/Multithreading/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/Multithreading/src/root/nested&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSACommunication&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSACommunication/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSACommunication/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSACommunication/src/root/nested&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSAImplement&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSAImplement/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSAImplement/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/RSAImplement/src/root/nested&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/TestProject&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/TestProject/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/TestProject/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/TestProject/src/root/nested&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/PiFinder&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/PiFinder/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/PiFinder/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/PiFinder/src/root/nested&quot;/>&#xA;&lt;selected IMemento.internal.id=&quot;/Users/alxcoh/Documents/workspace/CommonFunctions&quot;/>&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;1&quot; currentWorkingSetName=&quot;Aggregate for window 1385620249659&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/Projects/workspace/CommonFunctions&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/Projects/workspace/CommonFunctions/src&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/Projects/workspace/CommonFunctions/src/root&quot;/>&#xA;&lt;expanded IMemento.internal.id=&quot;/Users/alxcoh/Documents/Projects/workspace/CommonFunctions/src/root/nested&quot;/>&#xA;&lt;selected IMemento.internal.id=&quot;/Users/alxcoh/Documents/Projects/workspace/RSAImplement&quot;/>&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:PyDev</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_S_3YvWQtEeOe-_TivfLNKA" elementId="org.python.pydev.navigator.view">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -423,18 +423,18 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_3_r2QtEeOe-_TivfLNKA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ukL8GqiEeO0rs27jkEY8A" elementId="new.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ukzAGqiEeO0rs27jkEY8A" elementId="newWizardDropDown"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ukzAWqiEeO0rs27jkEY8A" elementId="new.ext" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ulaEGqiEeO0rs27jkEY8A" elementId="save.group" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ulaEWqiEeO0rs27jkEY8A" elementId="save"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ulaEmqiEeO0rs27jkEY8A" elementId="saveAll"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ulaE2qiEeO0rs27jkEY8A" elementId="save.ext" visible="false"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-umBIGqiEeO0rs27jkEY8A" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.gif" tooltip="Print" command="_TATdfWQtEeOe-_TivfLNKA"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-utV4GqiEeO0rs27jkEY8A" elementId="print.ext" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ut88GqiEeO0rs27jkEY8A" elementId="build.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ut88WqiEeO0rs27jkEY8A" elementId="build.ext" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-ut88mqiEeO0rs27jkEY8A" elementId="additions"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mmb0GtQEeOviN2ORO2tvw" elementId="new.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mmb0WtQEeOviN2ORO2tvw" elementId="newWizardDropDown"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mnC4GtQEeOviN2ORO2tvw" elementId="new.ext" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mnC4WtQEeOviN2ORO2tvw" elementId="save.group" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mnC4mtQEeOviN2ORO2tvw" elementId="save"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mnC42tQEeOviN2ORO2tvw" elementId="saveAll"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mnp8GtQEeOviN2ORO2tvw" elementId="save.ext" visible="false"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8moRAGtQEeOviN2ORO2tvw" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.gif" tooltip="Print" enabled="false" command="_TATdfWQtEeOe-_TivfLNKA"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mu-sGtQEeOviN2ORO2tvw" elementId="print.ext" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mu-sWtQEeOviN2ORO2tvw" elementId="build.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mu-smtQEeOviN2ORO2tvw" elementId="build.ext" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mvlwGtQEeOviN2ORO2tvw" elementId="additions"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_3_vGQtEeOe-_TivfLNKA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -442,8 +442,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_3_0WQtEeOe-_TivfLNKA" elementId="com.python.pydev.navigate.actionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xxQ8GqiEeO0rs27jkEY8A" elementId="pyNavigateGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xxQ8WqiEeO0rs27jkEY8A" elementId="com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pGWMGtQEeOviN2ORO2tvw" elementId="pyNavigateGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pGWMWtQEeOviN2ORO2tvw" elementId="com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_3_1GQtEeOe-_TivfLNKA" elementId="org.eclipse.debug.ui.breakpointActionSet" visible="false">
         <tags>Draggable</tags>
@@ -452,10 +452,10 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_3_12QtEeOe-_TivfLNKA" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xxQ8mqiEeO0rs27jkEY8A" elementId="debug"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xx4AGqiEeO0rs27jkEY8A" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xx4AWqiEeO0rs27jkEY8A" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xx4AmqiEeO0rs27jkEY8A" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pG9QGtQEeOviN2ORO2tvw" elementId="debug"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pG9QWtQEeOviN2ORO2tvw" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pG9QmtQEeOviN2ORO2tvw" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pHkUGtQEeOviN2ORO2tvw" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_4moGQtEeOe-_TivfLNKA" elementId="org.eclipse.jdt.ui.JavaElementCreationActionSet" visible="false">
         <tags>Draggable</tags>
@@ -466,8 +466,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_4mpWQtEeOe-_TivfLNKA" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xx4A2qiEeO0rs27jkEY8A" elementId="Search"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xyfEGqiEeO0rs27jkEY8A" elementId="org.eclipse.search.OpenSearchDialogPage"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pHkUWtQEeOviN2ORO2tvw" elementId="Search"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pHkUmtQEeOviN2ORO2tvw" elementId="org.eclipse.search.OpenSearchDialogPage"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_4mqGQtEeOe-_TivfLNKA" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
         <tags>Draggable</tags>
@@ -482,15 +482,15 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_4mr2QtEeOe-_TivfLNKA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uukAGqiEeO0rs27jkEY8A" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uukAWqiEeO0rs27jkEY8A" elementId="group.application" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uukAmqiEeO0rs27jkEY8A" elementId="backardHistory"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uvLEGqiEeO0rs27jkEY8A" elementId="forwardHistory"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uvLEWqiEeO0rs27jkEY8A" elementId="pin.group"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_-uvyIGqiEeO0rs27jkEY8A" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.gif" tooltip="Pin Editor" enabled="false" command="_TAK6lWQtEeOe-_TivfLNKA"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xyfEWqiEeO0rs27jkEY8A" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xyfEmqiEeO0rs27jkEY8A" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-xyfE2qiEeO0rs27jkEY8A" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mvlwWtQEeOviN2ORO2tvw" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mvlwmtQEeOviN2ORO2tvw" elementId="group.application" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mwM0GtQEeOviN2ORO2tvw" elementId="backardHistory"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mwM0WtQEeOviN2ORO2tvw" elementId="forwardHistory"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mwM0mtQEeOviN2ORO2tvw" elementId="pin.group"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8mwz4GtQEeOviN2ORO2tvw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.gif" tooltip="Pin Editor" enabled="false" command="_TAK6lWQtEeOe-_TivfLNKA"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pHkU2tQEeOviN2ORO2tvw" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pILYGtQEeOviN2ORO2tvw" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8pILYWtQEeOviN2ORO2tvw" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_4mumQtEeOe-_TivfLNKA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -502,8 +502,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_S_4mvmQtEeOe-_TivfLNKA" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uxAQGqiEeO0rs27jkEY8A" elementId="group.help"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-uxnUGqiEeO0rs27jkEY8A" elementId="group.application" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8myCAGtQEeOviN2ORO2tvw" elementId="group.help"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_8mypEGtQEeOviN2ORO2tvw" elementId="group.application" visible="false"/>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_S_4mwWQtEeOe-_TivfLNKA" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
@@ -794,7 +794,7 @@
     </bindings>
     <bindings xmi:id="_S_509WQtEeOe-_TivfLNKA" keySequence="ALT+CTRL+H" command="_TAMIt2QtEeOe-_TivfLNKA"/>
     <bindings xmi:id="_S_509mQtEeOe-_TivfLNKA" keySequence="ALT+COMMAND+R" command="_TAayJWQtEeOe-_TivfLNKA"/>
-    <bindings xmi:id="_-WV5MWqiEeO0rs27jkEY8A" keySequence="COMMAND+CTRL+F" command="_TAXu6WQtEeOe-_TivfLNKA"/>
+    <bindings xmi:id="_8NkQwWtQEeOviN2ORO2tvw" keySequence="COMMAND+CTRL+F" command="_TAXu6WQtEeOe-_TivfLNKA"/>
   </bindingTables>
   <bindingTables xmi:id="_S_6b0GQtEeOe-_TivfLNKA" elementId="org.eclipse.ui.textEditorScope" bindingContext="_S_9fQWQtEeOe-_TivfLNKA">
     <bindings xmi:id="_S_6b0WQtEeOe-_TivfLNKA" keySequence="COMMAND+SHIFT+NUMPAD_MULTIPLY" command="_TAK6n2QtEeOe-_TivfLNKA"/>
@@ -987,7 +987,7 @@
     <bindings xmi:id="_S_7qAWQtEeOe-_TivfLNKA" keySequence="CTRL+D" command="_TAPzDmQtEeOe-_TivfLNKA"/>
   </bindingTables>
   <bindingTables xmi:id="_S_7qAmQtEeOe-_TivfLNKA" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" bindingContext="_S_-GNmQtEeOe-_TivfLNKA">
-    <bindings xmi:id="_-WXHUGqiEeO0rs27jkEY8A" keySequence="M1+W" command="_TAXu62QtEeOe-_TivfLNKA"/>
+    <bindings xmi:id="_8Nle4GtQEeOviN2ORO2tvw" keySequence="M1+W" command="_TAXu62QtEeOe-_TivfLNKA"/>
   </bindingTables>
   <bindingTables xmi:id="_S_7qBGQtEeOe-_TivfLNKA" bindingContext="_S_-GOmQtEeOe-_TivfLNKA"/>
   <bindingTables xmi:id="_S_7qBWQtEeOe-_TivfLNKA" bindingContext="_S_-GO2QtEeOe-_TivfLNKA"/>
