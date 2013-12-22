@@ -16,4 +16,9 @@ def dimensionList(values):
 def print2DArray(array): #a readable print of a 2d array, actually in 2 dimensions
     for i in range(len(array)):
         print array[i]
+        
+def rollDice(num,sides):
+    total=0
+    for i in range(num):
+        total+=random.randrange(sides)+1
     
