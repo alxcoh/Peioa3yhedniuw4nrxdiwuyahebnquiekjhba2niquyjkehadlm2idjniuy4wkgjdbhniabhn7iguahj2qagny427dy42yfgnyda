@@ -21,4 +21,4 @@ def rollDice(num,sides):
     total=0
     for i in range(num):
         total+=random.randrange(sides)+1
-    
+    return total
