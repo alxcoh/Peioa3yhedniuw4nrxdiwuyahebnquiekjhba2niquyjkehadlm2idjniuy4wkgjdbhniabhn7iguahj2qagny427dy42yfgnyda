@@ -4,9 +4,9 @@ Created on Dec 22, 2013
 @author: alxcoh
 '''
 from decimal import *
-from math import *
-from random import *
-from time import *
+import math
+import random
+import time
 def dimensionList(values):
     a=[0 for i in range(values[0])] #first, init base array
     for i in range(1, len(values)): #for number of dimensions:
