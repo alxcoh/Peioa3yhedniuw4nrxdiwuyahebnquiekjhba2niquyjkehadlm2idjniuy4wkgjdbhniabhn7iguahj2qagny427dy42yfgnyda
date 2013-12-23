@@ -9,7 +9,7 @@ import pygame, sys
 from pygame.locals import *
 
 def main():
-    # Initialise screen
+    # Initialize screen
     pygame.init()
     screen = pygame.display.set_mode((900, 800))
     pygame.display.set_caption('sqiggity sqag')
@@ -17,6 +17,7 @@ def main():
     # Fill background
     background = pygame.Surface(screen.get_size())
     background = background.convert()
+<<<<<<< HEAD
     topR=252
     lowR=3
     topB=252
@@ -33,6 +34,13 @@ def main():
     g=89
     b=89
     background.fill((r, g, b))
+=======
+    r=255
+    g=0
+    b=255
+    
+    #r-=1
+>>>>>>> 2200568b8717175bc26cbdac47249005b4d4a3c9
     # Display some text
     font = pygame.font.Font(None, 36)
     text = font.render("Invisible Penis Unicorn HA I AM SO SMART", 1, (10, 10, 10))
@@ -40,11 +48,33 @@ def main():
     textpos.centerx = background.get_rect().centerx
     background.blit(text, textpos)
 
+<<<<<<< HEAD
     # Blit everything to the screen
     screen.blit(background, (0, 0))
     pygame.display.flip()
 
+=======
+    greaterR=0
+    greaterG=0
+>>>>>>> 2200568b8717175bc26cbdac47249005b4d4a3c9
     while 1: # Event loop
+        background.fill((r, g, b))
+        if r==0:
+            greaterR=1
+        elif r==255:
+            greaterR=0
+        if greaterR==0:
+            r-=1
+        elif greaterR==1:
+            r+=1
+        if g==0:
+            greaterG=1
+        elif g==255:
+            greaterG=0
+        if greaterG==0:
+            g-=1
+        elif greaterG==1:
+            g+=1
         for event in pygame.event.get():
             if event.type == QUIT:
                 return
