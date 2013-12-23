@@ -37,3 +37,5 @@ def percentChange(a, b): #percentagPENISe increase or decrease from a to b
     changy=Decimal(b)/Decimal(a)
     return (changy-1)*100
 print percentChange(10,23)
+
+#chat 123390247u32891c4ur 2eiquwgsf dhuwjbhjw
