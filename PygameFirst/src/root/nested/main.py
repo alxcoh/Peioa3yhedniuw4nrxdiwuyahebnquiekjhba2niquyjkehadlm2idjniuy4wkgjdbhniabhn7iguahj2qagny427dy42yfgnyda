@@ -17,20 +17,47 @@ def main():
     # Fill background
     background = pygame.Surface(screen.get_size())
     background = background.convert()
+<<<<<<< HEAD
     r=255
     g=0
     b=255
     
     #r-=1
+=======
+
+    topR=252
+    lowR=3
+    topB=252
+    lowB=3
+    topG=252
+    lowG=3
+    rUp=True
+    gUp=False
+    bUp=True
+    rIter=4
+    bIter=2
+    gIter=3
+    r=89
+    g=89
+    b=89
+    background.fill((r, g, b))
+
+>>>>>>> 01f24c4757072143f1d8a1618d24e1c17ce1c009
     # Display some text
     font = pygame.font.Font(None, 36)
     text = font.render("Hello There", 1, (10, 10, 10))
     textpos = text.get_rect()
     textpos.centerx = background.get_rect().centerx
     background.blit(text, textpos)
+<<<<<<< HEAD
 
     greaterR=0
     greaterG=0
+=======
+    screen.blit(background, (0, 0))
+    pygame.display.flip()
+
+>>>>>>> 01f24c4757072143f1d8a1618d24e1c17ce1c009
     while 1: # Event loop
         background.fill((r, g, b))
         if r==0:
