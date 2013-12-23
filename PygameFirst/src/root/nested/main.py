@@ -5,6 +5,7 @@ Created on Dec 22, 2013
 '''
 
 import pygame, sys
+#from pygame import *
 from pygame.locals import *
 
 pygame.init()
