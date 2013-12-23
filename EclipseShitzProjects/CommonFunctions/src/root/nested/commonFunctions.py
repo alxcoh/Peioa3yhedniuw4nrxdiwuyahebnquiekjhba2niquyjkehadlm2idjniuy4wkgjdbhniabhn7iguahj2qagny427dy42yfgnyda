@@ -33,9 +33,6 @@ def chanceOfHappen(a, b):
     else: 
         return 0 #event did not happen
     
-def percentChange(a, b): #percentagPENISe increase or decrease from a to b
+def percentChange(a, b): #percentage increase or decrease from a to b
     changy=Decimal(b)/Decimal(a)
     return (changy-1)*100
-
-
-
