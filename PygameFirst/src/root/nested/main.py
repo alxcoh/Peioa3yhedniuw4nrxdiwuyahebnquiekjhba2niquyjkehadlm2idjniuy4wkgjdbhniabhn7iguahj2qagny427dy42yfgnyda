@@ -7,7 +7,6 @@ Created on Dec 22, 2013
 import pygame, sys
 #from pygame import *
 from pygame.locals import *
-
 def main():
     # Initialize screen
     pygame.init()
