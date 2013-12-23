@@ -17,7 +17,7 @@ def main():
     # Fill background
     background = pygame.Surface(screen.get_size())
     background = background.convert()
-<<<<<<< HEAD
+
     topR=252
     lowR=3
     topB=252
@@ -34,29 +34,16 @@ def main():
     g=89
     b=89
     background.fill((r, g, b))
-=======
-    r=255
-    g=0
-    b=255
-    
-    #r-=1
->>>>>>> 2200568b8717175bc26cbdac47249005b4d4a3c9
+
     # Display some text
     font = pygame.font.Font(None, 36)
     text = font.render("Invisible Penis Unicorn HA I AM SO SMART", 1, (10, 10, 10))
     textpos = text.get_rect()
     textpos.centerx = background.get_rect().centerx
     background.blit(text, textpos)
-
-<<<<<<< HEAD
-    # Blit everything to the screen
     screen.blit(background, (0, 0))
     pygame.display.flip()
 
-=======
-    greaterR=0
-    greaterG=0
->>>>>>> 2200568b8717175bc26cbdac47249005b4d4a3c9
     while 1: # Event loop
         background.fill((r, g, b))
         if r==0:
