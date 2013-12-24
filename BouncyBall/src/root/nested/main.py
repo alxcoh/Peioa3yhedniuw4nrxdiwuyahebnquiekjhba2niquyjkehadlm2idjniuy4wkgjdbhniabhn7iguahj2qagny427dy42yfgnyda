@@ -8,24 +8,17 @@ from pygame.locals import *
 #Colors
 BLACK = pygame.Color(0, 0, 0)
 WHITE = pygame.Color(255, 255, 255)
-yPos=450
-xPos=400
-goingDown=1
-goingRight=1
 
-def ballCheck():
-    if yPos>=760:
-        goingDown=0
-    elif yPos<=40:
-        goingDown=1
-    if xPos>=860:
-        goingRight=0
-    elif xPos<=40:
-        goingRight=1
-        
-#def ballMove():
+
+
 
 def main():
+    #Variables
+    yPos=450
+    xPos=400
+    goingDown=1
+    goingRight=1
+    
     #Initialization
     pygame.init()
     screen = pygame.display.set_mode((900, 800))
@@ -45,7 +38,14 @@ def main():
         background.fill(WHITE)
         myBallCenterPos = (xPos, yPos)
         pygame.draw.circle(background, BLACK, myBallCenterPos, 40)
-        ballCheck()
+        if yPos>=760:
+            goingDown=0
+        elif yPos<=40:
+            goingDown=1
+        if xPos>=860:
+            goingRight=0
+        elif xPos<=40:
+            goingRight=1
         if goingRight==1:
             xPos+=8
         if goingRight==0:
