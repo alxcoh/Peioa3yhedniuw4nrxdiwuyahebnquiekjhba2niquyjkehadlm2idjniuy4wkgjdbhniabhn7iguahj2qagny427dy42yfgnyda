@@ -63,6 +63,11 @@ def main():
     yPos=400
     goingDown=1
     goingRight=1
+
+    
+    
+    
+
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
