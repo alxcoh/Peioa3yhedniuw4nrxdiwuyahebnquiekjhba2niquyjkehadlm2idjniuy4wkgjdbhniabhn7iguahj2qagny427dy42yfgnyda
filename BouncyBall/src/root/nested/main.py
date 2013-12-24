@@ -12,15 +12,7 @@ yPos=450
 xPos=400
 goingDown=1
 goingRight=1
-def ballMove():
-    if goingDown==1:
-        yPos+=8
-    if goingDown==0:
-        yPos-=8
-    if goingRight==1:
-        xPos+=8
-    if goingRight==0:
-        xPos-=8
+
 def ballCheck():
     if yPos>=760:
         goingDown=0
@@ -30,6 +22,9 @@ def ballCheck():
         goingRight=0
     elif xPos<=40:
         goingRight=1
+        
+#def ballMove():
+
 def main():
     #Initialization
     pygame.init()
@@ -51,7 +46,14 @@ def main():
         myBallCenterPos = (xPos, yPos)
         pygame.draw.circle(background, BLACK, myBallCenterPos, 40)
         ballCheck()
-        ballMove()
+        if goingRight==1:
+            xPos+=8
+        if goingRight==0:
+            xPos-=8
+        if goingDown==1:
+            yPos+=8
+        if goingDown==0:
+            yPos-=8
         pygame.display.flip()
         pygame.display.update()
 main()
