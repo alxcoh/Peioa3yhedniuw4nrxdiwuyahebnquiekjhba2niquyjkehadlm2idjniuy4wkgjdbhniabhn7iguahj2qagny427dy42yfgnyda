@@ -47,6 +47,15 @@ def ballMove(a, b, c, d):
     if goingDown==0:
         yPos-=8
     return xPos, yPos
+#Initialization
+pygame.init()
+screen = pygame.display.set_mode((900, 800))
+pygame.display.set_caption('Bouncing Ball')
+        
+#Background setup
+background = pygame.Surface(screen.get_size())
+background = background.convert()
+background.fill(WHITE)
 
 def main():
     #Variables
@@ -54,19 +63,6 @@ def main():
     yPos=400
     goingDown=1
     goingRight=1
-
-    
-    #Initialization
-    pygame.init()
-    screen = pygame.display.set_mode((900, 800))
-    pygame.display.set_caption('Bouncing Ball')
-        
-    #Background setup
-    background = pygame.Surface(screen.get_size())
-    background = background.convert()
-    background.fill(WHITE)
-    
-
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
