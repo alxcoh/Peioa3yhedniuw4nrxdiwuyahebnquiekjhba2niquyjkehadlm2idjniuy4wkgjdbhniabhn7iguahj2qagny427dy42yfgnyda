@@ -1,5 +1,6 @@
 import random
 import decimal
+import commonFunctions
 from decimal import *
 class Character:
     def __init__(self, ordNum, prob):
@@ -221,9 +222,3 @@ for x  in range(1, logicNum):
     print '\nDiffernce in percent won between good strategy and strategy ', x+1, ': ', Decimal(aCount[0]*100)/Decimal(cycleTimes)-aCounter[x], '%'
     percentIncrease=100*((Decimal(aCount[0])/Decimal(aCount[x]))-1)
     print 'Advantage good strategy gives over strategy ', x+1, ': ', percentIncrease, '%'
-<<<<<<< HEAD
-#hello
-=======
-#random message
-#poooow9as9s9s9s9s9s9
->>>>>>> branch 'master' of https://github.com/alxcoh/Peioa3yhedniuw4nrxdiwuyahebnquiekjhba2niquyjkehadlm2idjniuy4wkgjdbhniabhn7iguahj2qagny427dy42yfgnyda.git
