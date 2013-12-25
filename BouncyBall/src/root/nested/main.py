@@ -4,7 +4,7 @@ Created on Dec 23, 2013
 @author: alxcoh and 71619997a
 '''
 from commonFunctions import *
-from CommonPygame import *
+from commonPygame import *
 
 #Colors
 
