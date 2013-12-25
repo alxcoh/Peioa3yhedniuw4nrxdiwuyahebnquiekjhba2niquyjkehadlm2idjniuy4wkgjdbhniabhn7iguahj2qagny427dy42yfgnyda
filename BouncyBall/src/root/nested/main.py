@@ -122,5 +122,7 @@ say your name then a colon, then message
 
 GABRIEL: alex, to use global variables you define them regularly, then to use them 
     in a function, redefine the variable as global inside the function
+    
+ALEX: ok, i was confused by them so I just did it a different way but thats good to know
 '''
 ###############################################################################
