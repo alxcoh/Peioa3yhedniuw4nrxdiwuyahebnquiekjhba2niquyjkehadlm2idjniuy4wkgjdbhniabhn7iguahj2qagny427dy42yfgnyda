@@ -4,9 +4,8 @@ Created on Dec 23, 2013
 @author: alxcoh
 '''
 import pygame, sys
-from commonFunctions import *
 from pygame.locals import *
-
+from commonFunctions import *
 class color():
     def __init__(self, r, g, b):
         self.r=r
@@ -14,7 +13,7 @@ class color():
         self.b=b 
         self.full=pygame.Color(r, g, b)
     def col(self):
-        return (self.r,self.g,self.b) # wasn't working without this
+        return (self.r,self.g,self.b) # wasn't working without this col function
 
 #color definitions
 BLACK = color(0, 0, 0)

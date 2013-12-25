@@ -3,23 +3,25 @@ Created on Dec 23, 2013
 
 @author: alxcoh and 71619997a
 '''
-from commonFunctions import *
+from CommonPygame import * # CommonPygame now includes commonFunctions
 import pygame, sys
 from pygame.locals import *
 #Colors
 BLACK = pygame.Color(0, 0, 0)
 WHITE = pygame.Color(255, 255, 255)
 
-crazyball=False #  :D
+pause=False
+end=False
+crazyball=True #  :D
 loopnum=1
 yPos=400.0
 xPos=450.0
-maxDown=16.0
-maxRight=16.0
+maxDown=50.0
+maxRight=50.0
 goingDown=8.0
 goingRight=8.0
-randomness=4 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
-crazyDelay=10 #how often velocity changes in crazyball
+randomness=10 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
+crazyDelay=5 #how often velocity changes in crazyball
 
 
 def randomizeMovement(mvt, rand):
@@ -86,34 +88,54 @@ background = pygame.Surface(screen.get_size())
 background = background.convert()
 background.fill(WHITE)
 
-while True:
-    if goingDown>maxDown:
-        goingDown=maxDown
-    if goingDown<-maxDown:
-        goingDown=-maxDown
-    if goingRight>maxRight:
-        goingRight=maxRight
-    if goingRight<-maxRight:
-        goingRight=-maxRight
-    loopnum+=1
-    screen.blit(background, (0, 0))
-    background.fill(WHITE)
-    myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
-    pygame.draw.circle(background, BLACK, myBallCenterPos, 40)
-    
-    goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
-    xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
-    
+regularFont = pygame.font.Font(None,24)
+bigFont = pygame.font.Font(None, 240)
+
+pauseText = bigFont.render("Paused", 0, ROYALBLUE.col()) # use .col() to get the actual color itself
+textpos = pauseText.get_rect()
+textpos.centerx = background.get_rect().centerx
+textpos.centery = background.get_rect().centery
+s = pygame.Surface((1000,750))  # the size of your rect
+s.set_alpha(8)                # alpha level
+s.fill((255,255,255))           # this fills the entire surface
+
+while not end:
+    if not pause: # ingame
+        if goingDown>maxDown:
+            goingDown=maxDown
+        if goingDown<-maxDown:
+            goingDown=-maxDown
+        if goingRight>maxRight:
+            goingRight=maxRight
+        if goingRight<-maxRight:
+            goingRight=-maxRight
+        loopnum+=1
+        screen.blit(background, (0, 0))
+        background.fill(WHITE)
+        myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
+        pygame.draw.circle(background, BLACK, myBallCenterPos, 40)
+        
+        goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
+        xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
+        
+    else: # paused
+        screen.blit(s, (0,0))    # (0,0) are the top-left coordinates
+        screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
+    # ALL DA TIME
     pygame.display.flip()
     pygame.display.update()
-    
+        
     for event in pygame.event.get():
         if event.type == QUIT:
+            end=True
             break
         elif event.type == KEYDOWN:
             if event.key == K_ESCAPE:
+                end=True
                 pygame.quit()
                 break
+            if event.key == K_p: 
+                pause=not pause     # pause or unpause
         
 
 ################################### C H A T ###################################
