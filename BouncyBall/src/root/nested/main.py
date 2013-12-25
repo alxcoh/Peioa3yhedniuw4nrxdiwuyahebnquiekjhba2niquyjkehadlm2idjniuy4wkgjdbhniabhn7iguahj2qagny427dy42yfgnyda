@@ -97,7 +97,7 @@ while not end:
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
-        background.fill(BLUE.SKYBLUE.full)
+        background.fill(RED.YELLOW.GOLDENROD.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
         pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
         
