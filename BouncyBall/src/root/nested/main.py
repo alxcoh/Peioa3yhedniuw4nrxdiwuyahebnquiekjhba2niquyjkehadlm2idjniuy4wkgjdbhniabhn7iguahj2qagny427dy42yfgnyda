@@ -96,9 +96,6 @@ while True:
     if goingRight<-maxRight:
         goingRight=-maxRight
     loopnum+=1
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            break
     screen.blit(background, (0, 0))
     background.fill(WHITE)
     myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
@@ -109,6 +106,14 @@ while True:
     
     pygame.display.flip()
     pygame.display.update()
+    
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            break
+        elif event.type == KEYDOWN:
+            if event.key == K_ESCAPE:
+                pygame.quit()
+                break
         
 
 ################################### C H A T ###################################
