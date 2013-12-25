@@ -21,7 +21,7 @@ class BLUE(color):
     MEDIUMBLUE = color(0, 0, 205)
     AZURE = color(0, 127, 255)
     CYAN = color(0, 255, 255)
-    SKYBLUE = CYAN
+    SKYBLUE = color(0,180,255)
     AQUAMARINE = color(127, 255, 212)
     TEAL = color(0, 128, 128)
 
@@ -32,7 +32,10 @@ class GREEN(color):
     OLIVE = color(128, 128, 0)
     CHARTREUSE = color(127, 255, 0)
     LIME = color(191, 255, 0)
-
+    AQUAMARINE = color(127, 255, 212)
+    TEAL = color(0, 128, 128)
+    CYAN = color(0, 255, 255)
+    
 class RED(color):
     def __init__(self):
         color(255, 0, 0)
@@ -46,12 +49,34 @@ class RED(color):
     MAROON = color(128, 0, 0)
     CRIMSON = color(220, 20, 60)
     VIOLET = color(143, 0, 255)
+    CORAL = color(255, 127, 80)
     
-
+    
+class GRAY(color):
+    def __init__(self):
+        color(128, 128, 128)    
+    IVORY = color(255, 255, 240)
+    BEIGE = color(245, 245, 220)
+    WHEAT = color(245, 222, 179)
+    TAN = color(210, 180, 140)
+    KHAKI = color(195, 176, 145)
+    SILVER = color(192, 192, 192)
+    CHARCOAL = color(70, 70, 70)
+    
+    
+class YELLOW(color):
+    def __init__(self):
+        color(255, 255, 0)
+        
+    GOLD = color(255, 215, 0)
+    GOLDENROD = color(218, 165, 32)
+    KHAKI = color(195, 176, 145)
+    
 #color definitions
+
 BLACK = color(0, 0, 0)
 WHITE = color(255, 255, 255)
-IVORY = color(255, 255, 240)
+'''IVORY = color(255, 255, 240)
 BEIGE = color(245, 245, 220)
 WHEAT = color(245, 222, 179)
 TAN = color(210, 180, 140)
@@ -59,11 +84,10 @@ KHAKI = color(195, 176, 145)
 SILVER = color(192, 192, 192)
 GRAY = color(128, 128, 128)
 CHARCOAL = color(70, 70, 70)
-
+'''
 
 GOLD = color(255, 215, 0)
 GOLDENROD = color(218, 165, 32)
-CORAL = color(255, 127, 80)
 
 
 #Initialization
