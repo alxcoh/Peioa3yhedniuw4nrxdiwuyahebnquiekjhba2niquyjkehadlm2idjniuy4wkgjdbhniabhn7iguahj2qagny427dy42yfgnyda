@@ -10,7 +10,7 @@ from commonPygame import * # CommonPygame now includes commonFunctions
 trans=False
 pause=False
 end=False
-crazyball=True #  :D
+crazyball=False #  :D
 loopnum=1
 yPos=400.0
 xPos=450.0
@@ -77,7 +77,7 @@ def ballMove(a, b, c, d):
 regularFont = pygame.font.Font(None,24)
 bigFont = pygame.font.Font(None, 240)
 
-pauseText = bigFont.render("Paused", 0, ROYALBLUE.full) # use .col() to get the actual color itself
+pauseText = bigFont.render("Paused", 0, BLUE.ROYALBLUE.full) # use .col() to get the actual color itself
 textpos = pauseText.get_rect()
 textpos.centerx = background.get_rect().centerx
 textpos.centery = background.get_rect().centery
@@ -97,7 +97,7 @@ while not end:
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
-        background.fill(WHITE.full)
+        background.fill(BLUE.SKYBLUE.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
         pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
         
