@@ -89,7 +89,7 @@ background.fill(WHITE)
 continuing=1
 
 while True:
-    
+    #quitting
     for event in pygame.event.get():
         if event.type == QUIT:
             continuing=0
@@ -103,6 +103,9 @@ while True:
         continuing=1
     if continuing==0:
         break
+    
+    
+    #game events
     if goingDown>maxDown:
         goingDown=maxDown
     if goingDown<-maxDown:
