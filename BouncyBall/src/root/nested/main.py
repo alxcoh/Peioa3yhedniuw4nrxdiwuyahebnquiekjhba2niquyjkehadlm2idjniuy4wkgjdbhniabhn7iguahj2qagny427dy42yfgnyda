@@ -4,11 +4,10 @@ Created on Dec 23, 2013
 @author: alxcoh and 71619997a
 '''
 from commonFunctions import *
-import pygame, sys
-from pygame.locals import *
+from CommonPygame import *
+
 #Colors
-BLACK = pygame.Color(0, 0, 0)
-WHITE = pygame.Color(255, 255, 255)
+
 
 crazyball=False #  :D
 loopnum=1
@@ -76,15 +75,7 @@ def ballMove(a, b, c, d):
 
 
 
-#Initialization
-pygame.init()
-screen = pygame.display.set_mode((1000, 700))
-pygame.display.set_caption('Bouncing Ball')
-    
-#Background setup
-background = pygame.Surface(screen.get_size())
-background = background.convert()
-background.fill(WHITE)
+
 
 continuing=1
 
@@ -116,9 +107,9 @@ while True:
         goingRight=-maxRight
     loopnum+=1
     screen.blit(background, (0, 0))
-    background.fill(WHITE)
+    background.fill(WHITE.full)
     myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
-    pygame.draw.circle(background, BLACK, myBallCenterPos, 40)
+    pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
     
     goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
     xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
@@ -137,5 +128,9 @@ GABRIEL: alex, to use global variables you define them regularly, then to use th
     in a function, redefine the variable as global inside the function
     
 ALEX: ok, i was confused by them so I just did it a different way but thats good to know
+ALEX: I don't know if you imported it, but I made a common pygame file thats really useful.
+      It initializes everything so you can go straight onto the game loop. It also defines
+      a lot of colors as well as a color function so you never really have to define the 
+      individual rgb again (you can change a color in side a program btw)
 '''
 ###############################################################################
