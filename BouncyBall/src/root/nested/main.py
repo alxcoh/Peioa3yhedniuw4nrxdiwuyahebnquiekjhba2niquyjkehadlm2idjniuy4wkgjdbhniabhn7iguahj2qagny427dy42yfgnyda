@@ -86,7 +86,23 @@ background = pygame.Surface(screen.get_size())
 background = background.convert()
 background.fill(WHITE)
 
+continuing=1
+
 while True:
+    
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            continuing=0
+            break
+        elif event.type == KEYDOWN:
+            if event.key == K_ESCAPE:
+                pygame.quit()
+                continuing=0
+                break
+    else:
+        continuing=1
+    if continuing==0:
+        break
     if goingDown>maxDown:
         goingDown=maxDown
     if goingDown<-maxDown:
@@ -107,13 +123,7 @@ while True:
     pygame.display.flip()
     pygame.display.update()
     
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            break
-        elif event.type == KEYDOWN:
-            if event.key == K_ESCAPE:
-                pygame.quit()
-                break
+    
         
 
 ################################### C H A T ###################################
