@@ -3,7 +3,9 @@ Created on Dec 23, 2013
 
 @author: alxcoh and 71619997a
 '''
-from commonPygame import * # CommonPygame now includes commonFunctions
+
+from commonPygame import *
+
 
 #Colors
 
