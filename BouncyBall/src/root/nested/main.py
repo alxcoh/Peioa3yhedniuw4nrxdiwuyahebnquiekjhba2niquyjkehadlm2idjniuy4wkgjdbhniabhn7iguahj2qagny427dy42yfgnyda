@@ -3,18 +3,11 @@ Created on Dec 23, 2013
 
 @author: alxcoh and 71619997a
 '''
-<<<<<<< HEAD
-from CommonPygame import * # CommonPygame now includes commonFunctions
-import pygame, sys
-from pygame.locals import *
-=======
-from commonFunctions import *
-from commonPygame import *
+from commonPygame import * # CommonPygame now includes commonFunctions
 
->>>>>>> 818c63ad74364dd3eccb9358ef0a983deb6cbbf3
 #Colors
 
-
+trans=False
 pause=False
 end=False
 crazyball=True #  :D
@@ -81,22 +74,15 @@ def ballMove(a, b, c, d):
     yPos+=goingDown
     return xPos, yPos
 
-
-
-
-
-continuing=1
-
-<<<<<<< HEAD
 regularFont = pygame.font.Font(None,24)
 bigFont = pygame.font.Font(None, 240)
 
-pauseText = bigFont.render("Paused", 0, ROYALBLUE.col()) # use .col() to get the actual color itself
+pauseText = bigFont.render("Paused", 0, ROYALBLUE.full) # use .col() to get the actual color itself
 textpos = pauseText.get_rect()
 textpos.centerx = background.get_rect().centerx
 textpos.centery = background.get_rect().centery
 s = pygame.Surface((1000,750))  # the size of your rect
-s.set_alpha(8)                # alpha level
+s.set_alpha(6)                # alpha level
 s.fill((255,255,255))           # this fills the entire surface
 
 while not end:
@@ -111,16 +97,20 @@ while not end:
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
-        background.fill(WHITE)
+        background.fill(WHITE.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
-        pygame.draw.circle(background, BLACK, myBallCenterPos, 40)
+        pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
         
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
+        if trans: trans=False
         
     else: # paused
+        
         screen.blit(s, (0,0))    # (0,0) are the top-left coordinates
-        screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
+        if trans:
+            screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
+            trans=False
     # ALL DA TIME
     pygame.display.flip()
     pygame.display.update()
@@ -136,48 +126,8 @@ while not end:
                 break
             if event.key == K_p: 
                 pause=not pause     # pause or unpause
-=======
-while True:
-    #quitting
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            continuing=0
-            break
-        elif event.type == KEYDOWN:
-            if event.key == K_ESCAPE:
-                pygame.quit()
-                continuing=0
-                break
-    else:
-        continuing=1
-    if continuing==0:
-        break
-    
-    
-    #game events
-    if goingDown>maxDown:
-        goingDown=maxDown
-    if goingDown<-maxDown:
-        goingDown=-maxDown
-    if goingRight>maxRight:
-        goingRight=maxRight
-    if goingRight<-maxRight:
-        goingRight=-maxRight
-    loopnum+=1
-    screen.blit(background, (0, 0))
-    background.fill(WHITE.full)
-    myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
-    pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
-    
-    goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
-    xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
-    
-    pygame.display.flip()
-    pygame.display.update()
-    
-    
->>>>>>> 818c63ad74364dd3eccb9358ef0a983deb6cbbf3
-        
+                trans=not trans
+
 
 ################################### C H A T ###################################
 '''

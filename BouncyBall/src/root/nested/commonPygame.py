@@ -5,7 +5,7 @@ Created on Dec 23, 2013
 '''
 import pygame, sys
 from pygame.locals import *
-
+from commonFunctions import *
 class color():
     def __init__(self, r, g, b):
         self.r=r
