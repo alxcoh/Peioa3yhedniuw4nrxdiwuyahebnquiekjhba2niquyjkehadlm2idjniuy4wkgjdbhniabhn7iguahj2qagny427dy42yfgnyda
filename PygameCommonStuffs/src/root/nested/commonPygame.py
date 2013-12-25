@@ -67,7 +67,6 @@ class GRAY(color):
 class YELLOW(color):
     def __init__(self):
         color(255, 255, 0)
-        
     GOLD = color(255, 215, 0)
     GOLDENROD = color(218, 165, 32)
     KHAKI = color(195, 176, 145)
