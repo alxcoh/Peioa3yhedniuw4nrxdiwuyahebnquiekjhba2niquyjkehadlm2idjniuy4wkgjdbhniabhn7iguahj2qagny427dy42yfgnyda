@@ -13,6 +13,41 @@ class color():
         self.b=b 
         self.full=pygame.Color(r, g, b)
 
+class BLUE(color):
+    def __init__(self):
+        color(0,0,255)
+    NAVYBLUE = color(0, 0, 128)
+    ROYALBLUE = color(8, 76, 158)
+    MEDIUMBLUE = color(0, 0, 205)
+    AZURE = color(0, 127, 255)
+    CYAN = color(0, 255, 255)
+    SKYBLUE = CYAN
+    AQUAMARINE = color(127, 255, 212)
+    TEAL = color(0, 128, 128)
+
+class GREEN(color):
+    def __init__(self):
+        color(0, 255, 0)
+    FORESTGREEN = color(34, 139, 34)
+    OLIVE = color(128, 128, 0)
+    CHARTREUSE = color(127, 255, 0)
+    LIME = color(191, 255, 0)
+
+class RED(color):
+    def __init__(self):
+        color(255, 0, 0)
+    SALMON = color(250, 128, 114)
+    HOTPINK = color(252, 15, 192)
+    FUCHSIA = color(255, 119, 255)
+    PUCE = color(204, 136, 153)
+    MAUVE = color(224, 176, 255)
+    LAVENDER = color(181, 126, 220)
+    PLUM = color(132, 49, 121)
+    MAROON = color(128, 0, 0)
+    CRIMSON = color(220, 20, 60)
+    VIOLET = color(143, 0, 255)
+    
+
 #color definitions
 BLACK = color(0, 0, 0)
 WHITE = color(255, 255, 255)
@@ -24,31 +59,12 @@ KHAKI = color(195, 176, 145)
 SILVER = color(192, 192, 192)
 GRAY = color(128, 128, 128)
 CHARCOAL = color(70, 70, 70)
-NAVYBLUE = color(0, 0, 128)
-ROYALBLUE = color(8, 76, 158)
-MEDIUMBLUE = color(0, 0, 205)
-AZURE = color(0, 127, 255)
-CYAN = color(0, 255, 255)
-SKYBLUE = CYAN
-AQUAMARINE = color(127, 255, 212)
-TEAL = color(0, 128, 128)
-FORESTGREEN = color(34, 139, 34)
-OLIVE = color(128, 128, 0)
-CHARTREUSE = color(127, 255, 0)
-LIME = color(191, 255, 0)
+
+
 GOLD = color(255, 215, 0)
 GOLDENROD = color(218, 165, 32)
 CORAL = color(255, 127, 80)
-SALMON = color(250, 128, 114)
-HOTPINK = color(252, 15, 192)
-FUCHSIA = color(255, 119, 255)
-PUCE = color(204, 136, 153)
-MAUVE = color(224, 176, 255)
-LAVENDER = color(181, 126, 220)
-PLUM = color(132, 49, 121)
-MAROON = color(128, 0, 0)
-CRIMSON = color(220, 20, 60)
-VIOLET = color(143, 0, 255)
+
 
 #Initialization
 pygame.init()
