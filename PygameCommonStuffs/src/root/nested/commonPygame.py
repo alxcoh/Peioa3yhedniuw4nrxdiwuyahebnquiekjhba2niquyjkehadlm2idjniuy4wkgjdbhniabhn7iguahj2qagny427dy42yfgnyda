@@ -99,6 +99,7 @@ background = pygame.Surface(screen.get_size())
 background = background.convert()
 background.fill(WHITE.full)
 
+
 '''
 REMEMBER TO PUT THIS EVERYWHERE
 for event in pygame.event.get():
