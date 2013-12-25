@@ -3,12 +3,17 @@ Created on Dec 23, 2013
 
 @author: alxcoh and 71619997a
 '''
+<<<<<<< HEAD
 from CommonPygame import * # CommonPygame now includes commonFunctions
 import pygame, sys
 from pygame.locals import *
+=======
+from commonFunctions import *
+from commonPygame import *
+
+>>>>>>> 818c63ad74364dd3eccb9358ef0a983deb6cbbf3
 #Colors
-BLACK = pygame.Color(0, 0, 0)
-WHITE = pygame.Color(255, 255, 255)
+
 
 pause=False
 end=False
@@ -78,16 +83,11 @@ def ballMove(a, b, c, d):
 
 
 
-#Initialization
-pygame.init()
-screen = pygame.display.set_mode((1000, 700))
-pygame.display.set_caption('Bouncing Ball')
-    
-#Background setup
-background = pygame.Surface(screen.get_size())
-background = background.convert()
-background.fill(WHITE)
 
+
+continuing=1
+
+<<<<<<< HEAD
 regularFont = pygame.font.Font(None,24)
 bigFont = pygame.font.Font(None, 240)
 
@@ -136,6 +136,47 @@ while not end:
                 break
             if event.key == K_p: 
                 pause=not pause     # pause or unpause
+=======
+while True:
+    #quitting
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            continuing=0
+            break
+        elif event.type == KEYDOWN:
+            if event.key == K_ESCAPE:
+                pygame.quit()
+                continuing=0
+                break
+    else:
+        continuing=1
+    if continuing==0:
+        break
+    
+    
+    #game events
+    if goingDown>maxDown:
+        goingDown=maxDown
+    if goingDown<-maxDown:
+        goingDown=-maxDown
+    if goingRight>maxRight:
+        goingRight=maxRight
+    if goingRight<-maxRight:
+        goingRight=-maxRight
+    loopnum+=1
+    screen.blit(background, (0, 0))
+    background.fill(WHITE.full)
+    myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
+    pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
+    
+    goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
+    xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
+    
+    pygame.display.flip()
+    pygame.display.update()
+    
+    
+>>>>>>> 818c63ad74364dd3eccb9358ef0a983deb6cbbf3
         
 
 ################################### C H A T ###################################
@@ -144,5 +185,11 @@ say your name then a colon, then message
 
 GABRIEL: alex, to use global variables you define them regularly, then to use them 
     in a function, redefine the variable as global inside the function
+    
+ALEX: ok, i was confused by them so I just did it a different way but thats good to know
+ALEX: I don't know if you imported it, but I made a common pygame file thats really useful.
+      It initializes everything so you can go straight onto the game loop. It also defines
+      a lot of colors as well as a color function so you never really have to define the 
+      individual rgb again (you can change a color in side a program btw)
 '''
 ###############################################################################
