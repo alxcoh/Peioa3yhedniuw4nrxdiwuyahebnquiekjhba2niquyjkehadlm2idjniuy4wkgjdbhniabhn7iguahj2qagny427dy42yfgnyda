@@ -7,7 +7,6 @@ from commonPygame import * # CommonPygame now includes commonFunctions
 
 #Colors
 
-trans=False
 pause=False
 end=False
 crazyball=False #  :D
@@ -103,14 +102,11 @@ while not end:
         
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
-        if trans: trans=False
         
     else: # paused
         
         screen.blit(s, (0,0))    # (0,0) are the top-left coordinates
-        if trans:
-            screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
-            trans=False
+        screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
     # ALL DA TIME
     pygame.display.flip()
     pygame.display.update()
