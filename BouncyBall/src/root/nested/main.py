@@ -33,7 +33,7 @@ paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)]
 
-paddleLeft=pygame.Rect(30, paddleY[0], 15, paddleHeight[0])
+paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
 
 def randomizeMovement(mvt, rand):
@@ -112,11 +112,11 @@ while not end:
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
-        background.fill(YELLOW.GOLDENROD.full)
+        background.fill(GREEN.FORESTGREEN.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
         pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
-        pygame.draw.rect(background, GREEN.CHARTREUSE.full, paddleLeft)
-        pygame.draw.rect(background, GREEN.CHARTREUSE.full, paddleRight)
+        pygame.draw.rect(background, BLUE.AZURE.full, paddleLeft)
+        pygame.draw.rect(background, BLUE.AZURE.full, paddleRight)
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
         
