@@ -8,21 +8,27 @@ from commonPygame import *
 
 
 #Colors
-
+scoreL=0
+scoreR=0
 pause=False
 end=False
 crazyball=False #  :D
 loopnum=1
 yPos=400.0
 xPos=450.0
-maxDown=50.0
-maxRight=50.0
+maxDown=15.0
+maxRight=15.0
 goingDown=8.0
 goingRight=8.0
 randomness=10 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 
-
+def paddleTouched():
+    if xPos>=930: 
+        
+    if xPos<=70:    
+        
+        
 def randomizeMovement(mvt, rand):
     return mvt + random.randint(-rand,rand)
 
@@ -38,19 +44,20 @@ def ballCheck(a, b, c, d):
     yPos=d
     if yPos>=660 or yPos<=40:
         goingDown=-goingDown
-        goingRight=randomizeMovement(goingRight,randomness) #these two (this and
         if yPos>=660:
             yPos=650
         else:
             yPos=50
 
-    if xPos>=960 or xPos<=40:
+    if paddleTouched(): 
         goingRight=-goingRight
         goingDown=randomizeMovement(goingDown,randomness) #this one) are seemingly the wrong values to change ON PURPOSE
-        if xPos>=960:
-            xPos=950
-        else:
-            xPos=50
+    if xPos>=960:
+        scoreL+=1
+        pause=True
+    if xPos<=40:
+        scoreR+=1
+        pause=True
         
     return goingDown, goingRight
 
