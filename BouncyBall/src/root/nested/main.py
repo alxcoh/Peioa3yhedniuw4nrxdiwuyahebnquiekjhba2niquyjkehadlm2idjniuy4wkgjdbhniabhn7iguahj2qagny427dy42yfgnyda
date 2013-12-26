@@ -22,6 +22,13 @@ goingRight=8.0
 randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 
+paddleHeight=[150 for i in range(2)]
+
+paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)]
+
+paddleLeft=pygame.Rect(30, paddleY[0], 15, paddleHeight[0])
+paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
+
 
 def randomizeMovement(mvt, rand):
     return mvt + random.randint(-rand,rand)
@@ -101,7 +108,8 @@ while not end:
         background.fill(YELLOW.GOLDENROD.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
         pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
-        
+        pygame.draw.rect(background, GREEN.CHARTREUSE.full, paddleLeft)
+        pygame.draw.rect(background, GREEN.CHARTREUSE.full, paddleRight)
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
         
