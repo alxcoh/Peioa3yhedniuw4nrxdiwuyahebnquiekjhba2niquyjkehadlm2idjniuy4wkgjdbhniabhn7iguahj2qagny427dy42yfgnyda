@@ -20,6 +20,10 @@ maxDown=15.0
 maxRight=15.0
 goingDown=8.0
 goingRight=8.0
+W=False
+S=False
+UP=False
+DOWN=False
 randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 paddleHeight=[150 for i in range(2)]
@@ -138,11 +142,13 @@ while not end:
         screen.blit(background, (0, 0))
         background.fill(GREEN.FORESTGREEN.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
-        pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
+        pygame.draw.circle(background, BLACK.full, myBallCenterPos, 30)
         pygame.draw.rect(background, BLUE.AZURE.full, paddleLeft)
         pygame.draw.rect(background, BLUE.AZURE.full, paddleRight)
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
+        paddleLeft.top=paddleY[0]
+        paddleRight.top=paddleY[1]
         
     else: # paused
         
@@ -167,7 +173,36 @@ while not end:
             if event.key == K_p: 
                 pause=not pause     # pause or unpause
             if event.key==K_w:
-                paddleY[0]
+                W=True
+            if event.key==K_s:
+                S=True
+            if event.key==K_UP:
+                UP=True
+            if event.key==K_DOWN:
+                DOWN=True
+        if event.type==KEYUP:
+            if event.key==K_w:
+                W=False
+            if event.key==K_s:
+                S=False
+            if event.key==K_UP:
+                UP=False
+            if event.key==K_DOWN:
+                DOWN=False
+
+    
+    if W:
+        paddleY[0]-=paddleSpeed[0]
+        if paddleY[0]<0: paddleY[0]=0
+    if S:
+        paddleY[0]+=paddleSpeed[0]
+        if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
+    if UP:
+        paddleY[1]-=paddleSpeed[1]
+        if paddleY[1]<0: paddleY[1]=0
+    if DOWN:
+        paddleY[1]+=paddleSpeed[1]
+        if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
 
 
 ################################### C H A T ###################################
