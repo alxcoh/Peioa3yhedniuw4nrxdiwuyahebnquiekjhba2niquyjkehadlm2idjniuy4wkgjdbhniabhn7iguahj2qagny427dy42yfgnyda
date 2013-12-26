@@ -26,6 +26,8 @@ UP=False
 DOWN=False
 randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
+FPS=60
+fpsClock=pygame.time.Clock()
 paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
@@ -37,9 +39,9 @@ paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
 
 
 def paddleTouched():
-    if xPos>=930 and yPos>=paddleY[1] and yPos<=paddleY[1]+paddleHeight[1]: 
+    if xPos>=940 and yPos>=paddleY[1]-30 and yPos<=paddleY[1]+paddleHeight[1]+30: 
         return True
-    if xPos<=70 and yPos>=paddleY[0] and yPos<=paddleY[0]+paddleHeight[0]:
+    if xPos<=60 and yPos>=paddleY[0]-30 and yPos<=paddleY[0]+paddleHeight[0]+30:
         return True
     return False    
         
@@ -74,14 +76,14 @@ def ballCheck(a, b, c, d):
         if xPos<=70:
             xPos=80
             
-    if xPos>=960:
+    if xPos>=970:
         scoreL+=1
         xPos=450
         yPos=400
         goingRight=randomizeMovement(0,11)
         goingDown=randomizeMovement(0,11)     
         pause=True
-    if xPos<=40:
+    if xPos<=30:
         xPos=450
         yPos=400
         goingRight=randomizeMovement(0,11)
@@ -204,6 +206,7 @@ while not end:
         paddleY[1]+=paddleSpeed[1]
         if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
 
+    fpsClock.tick(FPS)
 
 ################################### C H A T ###################################
 '''
