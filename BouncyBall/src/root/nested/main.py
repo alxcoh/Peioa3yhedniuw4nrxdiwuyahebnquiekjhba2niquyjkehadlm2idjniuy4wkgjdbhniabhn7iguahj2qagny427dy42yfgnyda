@@ -12,27 +12,31 @@ scoreL=0
 scoreR=0
 pause=False
 end=False
-crazyball=False #  :D
+crazyball=True #  :D
+CPUMODEACTIVATE=False
+DOUBLEGODDAMNCPUMODEINSANITYACTIVATEHELPMEGODJESUSSAVEME=True
 loopnum=1
 yPos=400.0
 xPos=450.0
-maxDown=15.0
-maxRight=15.0
+maxDown=50.0
+maxRight=50.0
+startspeedD=8
+startspeedR=8
 goingDown=8.0
 goingRight=8.0
 W=False
 S=False
 UP=False
 DOWN=False
-randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
-crazyDelay=5 #how often velocity changes in crazyball
+randomness=20 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
+crazyDelay=1 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
 paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10 for i in range(2)]
+paddleSpeed=[200,200]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -45,6 +49,13 @@ def paddleTouched():
         return True
     return False    
         
+def CPUTIME(doubloons):
+    if paddleY[1]+paddleHeight[1]/2<yPos: paddleY[1]+=paddleSpeed[1]
+    if paddleY[1]+paddleHeight[1]/2>yPos: paddleY[1]-=paddleSpeed[1]
+    if doubloons:
+        if paddleY[0]+paddleHeight[0]/2<yPos: paddleY[0]+=paddleSpeed[0]
+        if paddleY[0]+paddleHeight[0]/2>yPos: paddleY[0]-=paddleSpeed[0]
+
 def randomizeMovement(mvt, rand):
     return mvt + random.randint(-rand,rand)
 
@@ -70,7 +81,8 @@ def ballCheck(a, b, c, d):
 
     if paddleTouched(): 
         goingRight=-goingRight
-        goingDown=randomizeMovement(goingDown,randomness) #this one) are seemingly the wrong values to change ON PURPOSE
+        goingDown=randomizeMovement(goingDown,randomness)
+        goingRight=randomizeMovement(goingRight,randomness/2)
         if xPos>=930:
             xPos=920
         if xPos<=70:
@@ -86,9 +98,9 @@ def ballCheck(a, b, c, d):
     if xPos<=30:
         xPos=450
         yPos=400
-        goingRight=randomizeMovement(0,11)
-        goingDown=randomizeMovement(0,11) 
-        while not (goingRight<-6 or goingRight>6) and not (goingDown<-4 or goingDown>4):
+        goingRight=randomizeMovement(0,startspeedR*1.5)
+        goingDown=randomizeMovement(0,startspeedD*1.5) 
+        while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
             goingRight=randomizeMovement(0,11)
             goingDown=randomizeMovement(0,11) 
         scoreR+=1
@@ -151,6 +163,8 @@ while not end:
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
         paddleLeft.top=paddleY[0]
         paddleRight.top=paddleY[1]
+        if CPUMODEACTIVATE: CPUTIME(False)
+        elif DOUBLEGODDAMNCPUMODEINSANITYACTIVATEHELPMEGODJESUSSAVEME: CPUTIME(True)
         
     else: # paused
         
@@ -192,19 +206,20 @@ while not end:
             if event.key==K_DOWN:
                 DOWN=False
 
-    
-    if W:
-        paddleY[0]-=paddleSpeed[0]
-        if paddleY[0]<0: paddleY[0]=0
-    if S:
-        paddleY[0]+=paddleSpeed[0]
-        if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
-    if UP:
-        paddleY[1]-=paddleSpeed[1]
-        if paddleY[1]<0: paddleY[1]=0
-    if DOWN:
-        paddleY[1]+=paddleSpeed[1]
-        if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
+    if not DOUBLEGODDAMNCPUMODEINSANITYACTIVATEHELPMEGODJESUSSAVEME:
+        if W:
+            paddleY[0]-=paddleSpeed[0]
+            if paddleY[0]<0: paddleY[0]=0
+        if S:
+            paddleY[0]+=paddleSpeed[0]
+            if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
+    if not (CPUMODEACTIVATE or DOUBLEGODDAMNCPUMODEINSANITYACTIVATEHELPMEGODJESUSSAVEME):
+        if UP:
+            paddleY[1]-=paddleSpeed[1]
+            if paddleY[1]<0: paddleY[1]=0
+        if DOWN:
+            paddleY[1]+=paddleSpeed[1]
+            if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
 
     fpsClock.tick(FPS)
 
