@@ -212,13 +212,6 @@ while not end:
 '''
 say your name then a colon, then message
 
-GABRIEL: alex, to use global variables you define them regularly, then to use them 
-    in a function, redefine the variable as global inside the function
-    
-ALEX: ok, i was confused by them so I just did it a different way but thats good to know
-ALEX: I don't know if you imported it, but I made a common pygame file thats really useful.
-      It initializes everything so you can go straight onto the game loop. It also defines
-      a lot of colors as well as a color function so you never really have to define the 
-      individual rgb again (you can change a color in side a program btw)
+
 '''
 ###############################################################################
