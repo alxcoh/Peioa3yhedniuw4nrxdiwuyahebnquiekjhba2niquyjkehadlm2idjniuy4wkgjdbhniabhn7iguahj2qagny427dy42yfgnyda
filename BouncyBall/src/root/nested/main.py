@@ -22,6 +22,8 @@ goingDown=8.0
 goingRight=8.0
 randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
+FPS=60
+fpsClock=pygame.time.Clock()
 paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
@@ -168,7 +170,7 @@ while not end:
                 pause=not pause     # pause or unpause
             if event.key==K_w:
                 paddleY[0]
-
+        fpsClock.tick(FPS)
 
 ################################### C H A T ###################################
 '''
