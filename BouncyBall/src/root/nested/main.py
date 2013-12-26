@@ -35,9 +35,9 @@ paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
 
 
 def paddleTouched():
-    if xPos>=930 and yPos>=paddleY[1] and yPos<=paddleY[1]+paddleHeight[1]: 
+    if xPos>=940 and yPos>=paddleY[1]-30 and yPos<=paddleY[1]+paddleHeight[1]+30: 
         return True
-    if xPos<=70 and yPos>=paddleY[0] and yPos<=paddleY[0]+paddleHeight[0]:
+    if xPos<=60 and yPos>=paddleY[0]-30 and yPos<=paddleY[0]+paddleHeight[0]+30:
         return True
     return False    
         
@@ -72,14 +72,14 @@ def ballCheck(a, b, c, d):
         if xPos<=70:
             xPos=80
             
-    if xPos>=960:
+    if xPos>=970:
         scoreL+=1
         xPos=450
         yPos=400
         goingRight=randomizeMovement(0,11)
         goingDown=randomizeMovement(0,11)     
         pause=True
-    if xPos<=40:
+    if xPos<=30:
         xPos=450
         yPos=400
         goingRight=randomizeMovement(0,11)
@@ -140,7 +140,7 @@ while not end:
         screen.blit(background, (0, 0))
         background.fill(GREEN.FORESTGREEN.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a round
-        pygame.draw.circle(background, BLACK.full, myBallCenterPos, 40)
+        pygame.draw.circle(background, BLACK.full, myBallCenterPos, 30)
         pygame.draw.rect(background, BLUE.AZURE.full, paddleLeft)
         pygame.draw.rect(background, BLUE.AZURE.full, paddleRight)
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
