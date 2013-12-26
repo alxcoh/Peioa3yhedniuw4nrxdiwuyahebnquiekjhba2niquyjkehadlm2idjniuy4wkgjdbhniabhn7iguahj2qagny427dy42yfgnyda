@@ -11,7 +11,7 @@ from commonPygame import *
 
 pause=False
 end=False
-crazyball=False #  :D
+crazyball=True #  :D
 loopnum=1
 yPos=400.0
 xPos=450.0
