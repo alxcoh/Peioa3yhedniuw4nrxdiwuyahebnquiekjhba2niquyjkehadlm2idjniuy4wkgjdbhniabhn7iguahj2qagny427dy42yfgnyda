@@ -23,14 +23,12 @@ goingRight=8.0
 randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 
-<<<<<<< HEAD
 def paddleTouched():
     if xPos>=930: 
         
     if xPos<=70:    
         
         
-=======
 paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)]
@@ -38,8 +36,6 @@ paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)]
 paddleLeft=pygame.Rect(30, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
 
-
->>>>>>> 0da95bf3d119374d53cd89aaa3441cfa5a5638cc
 def randomizeMovement(mvt, rand):
     return mvt + random.randint(-rand,rand)
 
