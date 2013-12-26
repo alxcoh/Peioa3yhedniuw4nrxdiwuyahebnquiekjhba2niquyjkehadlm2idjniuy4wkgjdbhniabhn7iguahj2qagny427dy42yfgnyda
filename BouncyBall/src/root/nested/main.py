@@ -22,20 +22,23 @@ goingDown=8.0
 goingRight=8.0
 randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
-
-def paddleTouched():
-    if xPos>=930: 
-        
-    if xPos<=70:    
-        
-        
 paddleHeight=[150 for i in range(2)]
 
-paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)]
+paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
+
+paddleSpeed=[10 for i in range(2)]
 
 paddleLeft=pygame.Rect(30, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
 
+
+def paddleTouched():
+    if xPos>=930 and yPos>=paddleY[1] and yPos<=paddleY[1]+paddleHeight[1]: 
+        return True
+    if xPos<=70 and yPos>=paddleY[0] and yPos<=paddleY[0]+paddleHeight[0]:
+        return True
+    return False    
+        
 def randomizeMovement(mvt, rand):
     return mvt + random.randint(-rand,rand)
 
@@ -45,6 +48,9 @@ def ballCheck(a, b, c, d):
     global xPos
     global yPos
     global randomness
+    global scoreL
+    global scoreR
+    global pause
     goingDown=a
     goingRight=b
     xPos=c
@@ -59,10 +65,26 @@ def ballCheck(a, b, c, d):
     if paddleTouched(): 
         goingRight=-goingRight
         goingDown=randomizeMovement(goingDown,randomness) #this one) are seemingly the wrong values to change ON PURPOSE
+        if xPos>=930:
+            xPos=920
+        if xPos<=70:
+            xPos=80
+            
     if xPos>=960:
         scoreL+=1
+        xPos=450
+        yPos=400
+        goingRight=randomizeMovement(0,11)
+        goingDown=randomizeMovement(0,11)     
         pause=True
     if xPos<=40:
+        xPos=450
+        yPos=400
+        goingRight=randomizeMovement(0,11)
+        goingDown=randomizeMovement(0,11) 
+        while not (goingRight<-6 or goingRight>6) and not (goingDown<-4 or goingDown>4):
+            goingRight=randomizeMovement(0,11)
+            goingDown=randomizeMovement(0,11) 
         scoreR+=1
         pause=True
         
@@ -89,7 +111,7 @@ def ballMove(a, b, c, d):
     yPos+=goingDown
     return xPos, yPos
 
-regularFont = pygame.font.Font(None,24)
+regularFont = pygame.font.Font(None,60)
 bigFont = pygame.font.Font(None, 240)
 
 pauseText = bigFont.render("Paused", 0, BLUE.ROYALBLUE.full) # use .col() to get the actual color itself
@@ -99,6 +121,8 @@ textpos.centery = background.get_rect().centery
 s = pygame.Surface((1000,750))  # the size of your rect
 s.set_alpha(2)                # alpha level
 s.fill((255,255,255))           # this fills the entire surface
+
+
 
 while not end:
     if not pause: # ingame
@@ -125,6 +149,9 @@ while not end:
         screen.blit(s, (0,0))    # (0,0) are the top-left coordinates
         screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
     # ALL DA TIME
+    
+    screen.blit(regularFont.render(str(scoreL), 0, BLUE.ROYALBLUE.full),(50,50))
+    screen.blit(regularFont.render(str(scoreR), 0, BLUE.ROYALBLUE.full),(923,50))
     pygame.display.flip()
     pygame.display.update()
         
@@ -139,6 +166,8 @@ while not end:
                 break
             if event.key == K_p: 
                 pause=not pause     # pause or unpause
+            if event.key==K_w:
+                paddleY[0]
 
 
 ################################### C H A T ###################################
