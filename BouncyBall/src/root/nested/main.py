@@ -11,7 +11,7 @@ from commonPygame import *
 
 pause=False
 end=False
-crazyball=True #  :D
+crazyball=False #  :D
 loopnum=1
 yPos=400.0
 xPos=450.0
@@ -19,7 +19,7 @@ maxDown=50.0
 maxRight=50.0
 goingDown=8.0
 goingRight=8.0
-randomness=10 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
+randomness=2 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 
 
