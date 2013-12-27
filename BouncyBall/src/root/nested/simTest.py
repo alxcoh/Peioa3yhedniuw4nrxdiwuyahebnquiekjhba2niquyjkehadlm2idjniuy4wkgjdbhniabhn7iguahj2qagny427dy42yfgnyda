@@ -10,17 +10,24 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
     yPosy=yPosy
     xVel=xVel
     yVel=yVel
-    if side==0:
-        while hit==False:
-            if xPosy<=30:
-                return yPosy
-            else:
-                xPosy+=xVel
-                yPosy+=yVel
-    if side==1:
+    if yVel>=0:
+        goingDown=True
+    else:
+        goingDown=False
+    if side==False:
         while hit==False:
             if xPosy>=970:
-                    return yPosy
+                hit=True
+                print yPosy+75
+                return yPosy+75
             else:
+                if goingDown==True:
+                    yPosy+=yVel
+                elif goingDown==False:
+                    yPosy-=yVel
+                if yPosy>670:
+                    goingDown=False
+                elif yPosy<30:
+                    goingDown=True
                 xPosy+=xVel
-                yPosy+=yVel
+                                
