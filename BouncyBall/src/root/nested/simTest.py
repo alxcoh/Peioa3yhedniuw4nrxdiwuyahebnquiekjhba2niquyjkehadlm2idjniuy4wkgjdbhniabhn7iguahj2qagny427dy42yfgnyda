@@ -26,6 +26,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
         while hit==False:
             if xPosy>=970:
                 hit=True
+                print 'I expect: ', yPosy
                 return yPosy
             else:
                 if yPosy>670:

@@ -36,7 +36,7 @@ paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10,4]
+paddleSpeed=[10,2]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -54,7 +54,7 @@ def CPUTIME(value):
         #print 'goingUp'
         paddleY[1]-=paddleSpeed[1]
     elif paddleY[1]+75<value:
-        #print 'goingdown'
+        #print 'goingDown'
         paddleY[1]+=paddleSpeed[1]
 def randomizeMovement(mvt, rand):
     return mvt + random.randrange(rand)
@@ -81,8 +81,8 @@ def ballCheck(a, b, c, d):
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
-        
-        goingRight=-goingRight
+        if paddleTouchedVal==1:
+            goingRight=-goingRight
         if goingRight>=0:
             goingRight+=random.randrange(0, 3)
         elif goingRight<0:
@@ -97,8 +97,6 @@ def ballCheck(a, b, c, d):
             xPos=80
     if xPos>=970:
         scoreL+=1
-        print 'Expected: ', val
-        print 'Real: ', yPos
         xPos=450
         yPos=400
         rVal=random.randrange(-2, 2)
@@ -180,10 +178,8 @@ while not end:
         if goingDown<-maxDown:
             goingDown=-maxDown
         if goingRight>maxRight:
-            print 'maxed'
             goingRight=maxRight
         if goingRight<-maxRight:
-            print 'minned'
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
