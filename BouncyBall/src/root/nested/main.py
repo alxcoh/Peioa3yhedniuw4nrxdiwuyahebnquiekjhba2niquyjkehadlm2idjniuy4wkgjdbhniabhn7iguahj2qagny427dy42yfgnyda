@@ -28,7 +28,7 @@ W=False
 S=False
 UP=False
 DOWN=False
-randomness=0 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
+randomness=4 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
@@ -36,7 +36,7 @@ paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10,6]
+paddleSpeed=[10,10]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -57,7 +57,7 @@ def CPUTIME(doubloons):
         if paddleY[0]+paddleHeight[0]/2>yPos: paddleY[0]-=paddleSpeed[0]
 
 def randomizeMovement(mvt, rand):
-    return mvt + random.randint(-rand,rand)
+    return mvt + random.randrange(rand)
 
 def ballCheck(a, b, c, d):
     global goingDown
@@ -81,8 +81,8 @@ def ballCheck(a, b, c, d):
 
     if paddleTouched(): 
         goingRight=-goingRight
-        goingDown=randomizeMovement(goingDown,randomness)
-        goingRight=randomizeMovement(goingRight,randomness/2)
+        goingDown+=random.randint(-randomness, randomness)
+        goingRight=randomizeMovement(goingRight,3)
         if xPos>=930:
             xPos=920
         if xPos<=70:
@@ -92,8 +92,8 @@ def ballCheck(a, b, c, d):
         scoreL+=1
         xPos=450
         yPos=400
-        goingRight=randomizeMovement(0,11)
-        goingDown=randomizeMovement(0,11)     
+        goingRight=randomizeMovement(0,22)-11
+        goingDown=randomizeMovement(0,22)-11  
         pause=True
     if xPos<=30:
         xPos=450
@@ -101,8 +101,8 @@ def ballCheck(a, b, c, d):
         goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
-            goingRight=randomizeMovement(0,11)
-            goingDown=randomizeMovement(0,11) 
+            goingRight=randomizeMovement(0,22)-11
+            goingDown=randomizeMovement(0,22)-11
         scoreR+=1
         pause=True
         
