@@ -81,10 +81,6 @@ def ballCheck(a, b, c, d):
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
-        if paddleTouchedVal==1:
-            print 'Expected: ', val
-            print 'Real: ', yPos
-            print 'Difference: ', val-yPos
         goingRight=-goingRight
         if goingRight>=0:
             goingRight+=random.randrange(0, 3)
