@@ -3,6 +3,8 @@ Created on Dec 26, 2013
 
 @author: alxcoh
 '''
+from commonFunctions import *
+
 def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST ALEXS FUNCTION
     #btw this is long and unnecessary look at mine
     hit=False #if the sim reaches its end
@@ -11,6 +13,21 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
     yPosy=yPosy
     xVel=xVel
     yVel=yVel
+    maxDown=10
+    maxRight=50
+    
+    if yVel>maxDown:
+        yVel=maxDown
+    if yVel<-maxDown:
+        yVel=-maxDown
+        
+    if xVel>maxRight:
+        xVel=maxRight
+    if xVel<-maxRight:
+        xVel=-maxRight
+        
+    counter=0
+    values=dimensionList([4, 100000])
     '''
     if yVel>=0:
         goingDown=True
@@ -27,7 +44,11 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
     '''
     if side==False:
         while hit==False:
-            
+            values[counter][0]=xPosy
+            values[counter][1]=yPosy
+            values[counter][2]=xVel
+            values[counter][3]=yVel
+            #print values[counter]
             if xPosy>=940:
                 hit=True
                 return yPosy
@@ -43,11 +64,10 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
             if xPosy<=60:
                 xVel*=-1.0
                 xPosy=80
-            
+                
             xPosy+=xVel
             yPosy+=yVel
-            
-                        
+            counter+=1
 
 def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is left, true is right
     '''more natural to me because physics
