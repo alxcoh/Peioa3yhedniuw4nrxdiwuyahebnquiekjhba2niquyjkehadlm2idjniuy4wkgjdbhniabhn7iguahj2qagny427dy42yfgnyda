@@ -38,7 +38,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
                     yPosy=50
                 if xPosy<=60:
                     goingRight=True    
-                    xPosy=80
+                
                 if goingDown==True:
                     if startY==True:
                         yPosy+=yVel
@@ -61,6 +61,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
                         xPosy-=xVel
                     elif start==False:
                         xPosy+=xVel
+
                                 
 
 def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is left, true is right
