@@ -64,7 +64,7 @@ def CPUTIME(value):
         #print 'goingDown'
         paddleY[1]+=paddleSpeed[1]
 def randomizeMovement(mvt, rand):
-    return mvt + random.randrange(rand)
+    return mvt + random.randrange(0, rand)
 
 def ballCheck(a, b, c, d):
     global goingDown
@@ -109,7 +109,7 @@ def ballCheck(a, b, c, d):
         if xPos<=70:
             xPos=80
         
-        val=simTester(False, xPos, yPos, goingRight, goingDown)
+        if CPU1==True: val=simTester(False, xPos, yPos, goingRight, goingDown)
         #val=FORESEETHEFUTURE(False,xPos,yPos,goingRight,goingDown,900,720,0)
     if xPos>=970: 
         print 'Expected: ', val
@@ -120,13 +120,28 @@ def ballCheck(a, b, c, d):
         yPos=350
         paddleY[1]=275
         paddleY[0]=275
+        '''
         goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
             goingRight=randomizeMovement(0,startspeedR*1.5)
             goingDown=randomizeMovement(0,startspeedD*0.7) #alex this is much much better than your code b/c it takes the origi
+        #thefuck is an origi this doesnt work
+        '''  
+        rVal=random.randrange(-2, 2)
+        dVal=random.randrange(-2, 2)
+        if rVal<0:
+            goingRight=rVal-4
+        elif rVal>=0:
+            goingRight=rVal+4
             
-        val=simTester(False, xPos, yPos, goingRight, goingDown)
+        if dVal<0:
+            goingDown=dVal-4
+        elif dVal>=0:
+            goingDown=dVal+4
+
+        
+        if CPU1==True: val=simTester(False, xPos, yPos, goingRight, goingDown)
         
         pause=True
         
@@ -136,14 +151,27 @@ def ballCheck(a, b, c, d):
         yPos=350
         paddleY[0]=275
         paddleY[1]=275
+        '''
         goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
             goingRight=randomizeMovement(0,startspeedR*1.5)
             goingDown=randomizeMovement(0,startspeedD*0.7) #alex this is much much better than your code b/c it takes the original speed into consideration
+        '''
+        rVal=random.randrange(-2, 2)
+        dVal=random.randrange(-2, 2)
+        if rVal<0:
+            goingRight=rVal-4
+        elif rVal>=0:
+            goingRight=rVal+4
+            
+        if dVal<0:
+            goingDown=dVal-4
+        elif dVal>=0:
+            goingDown=dVal+4
 
         
-        val=simTester(False, xPos, yPos, goingRight, goingDown)
+        if CPU1==True: val=simTester(False, xPos, yPos, goingRight, goingDown)
         
         pause=True
         
@@ -162,10 +190,12 @@ def ballMove(a, b, c, d):
     if crazyball and loopnum % crazyDelay==0:
         goingRight=randomizeMovement(goingRight,randomness) #randomize every 5 frames for crazyball
         goingDown=randomizeMovement(goingDown,randomness)
+
     while goingRight==0:
         goingRight=randomizeMovement(goingRight,2) # this and
     while goingDown==0:
         goingDown=randomizeMovement(goingDown,2) # this are to prevent stalling
+
     xPos+=goingRight
     yPos+=goingDown
     return xPos, yPos

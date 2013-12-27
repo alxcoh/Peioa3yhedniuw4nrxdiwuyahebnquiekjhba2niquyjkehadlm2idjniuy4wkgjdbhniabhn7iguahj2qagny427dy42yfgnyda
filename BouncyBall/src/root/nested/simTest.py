@@ -27,7 +27,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
         xVel=-maxRight
         
     counter=0
-    values=dimensionList([4, 100000])
+    #values=dimensionList([4, 100000])
     '''
     if yVel>=0:
         goingDown=True
@@ -44,10 +44,6 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
     '''
     if side==False:
         while hit==False:
-            values[counter][0]=xPosy
-            values[counter][1]=yPosy
-            values[counter][2]=xVel
-            values[counter][3]=yVel
             #print values[counter]
             if xPosy>=940:
                 hit=True
