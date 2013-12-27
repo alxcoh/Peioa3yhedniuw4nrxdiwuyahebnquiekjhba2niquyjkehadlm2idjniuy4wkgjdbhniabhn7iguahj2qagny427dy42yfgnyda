@@ -68,6 +68,8 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
             xPosy+=xVel
             yPosy+=yVel
             counter+=1
+            #good job your prev one was so dumb and confusing but this is good sim
+            #what i was trying to do was make it not simulate but calculate mathematically
 
 def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is left, true is right
     '''more natural to me because physics
@@ -84,11 +86,11 @@ def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is l
     newX=Vx*firstFramesToYWall+x
     wavelength=2*sizeY/Vy*Vx
     n=0
-    while not side and newX+n*wavelength>70:
+    while not side and newX+n*wavelength<930:
         n+=1
         print 'while not loop done: iter'
     
-    while side and not newX+n*wavelength<930:
+    while side and not newX+n*wavelength>70:
         n+=1
         print 'while not loop done: iter'
     distFromPaddle=0

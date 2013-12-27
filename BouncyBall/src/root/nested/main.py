@@ -24,6 +24,12 @@ startspeedD=8
 startspeedR=8
 goingDown=8.0
 goingRight=8.0
+maxDown=15
+maxRight=50
+startspeedD=8
+startspeedR=8
+goingDown=startspeedD
+goingRight=startspeedR
 W=False
 S=False
 UP=False
@@ -83,13 +89,12 @@ def ballCheck(a, b, c, d):
             print 'BOUNCE BOT:', xPos, yPos, goingRight, goingDown
             yPos=50
 
-    paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
+    paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 2 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
         if paddleTouchedVal==1:
             print 'Expected: ', val
             print 'Real: ', yPos, goingRight, goingDown
             print 'Difference: ', val-yPos
-            
         
         goingRight=-goingRight
         if goingRight>=0:
@@ -105,8 +110,8 @@ def ballCheck(a, b, c, d):
             xPos=80
         
         val=simTester(False, xPos, yPos, goingRight, goingDown)
-        
-    if xPos>=970:
+        #val=FORESEETHEFUTURE(False,xPos,yPos,goingRight,goingDown,900,720,0)
+    if xPos>=970: 
         print 'Expected: ', val
         print 'Real: ', yPos, goingRight, goingDown
         print 'Difference: ', val-yPos
@@ -115,43 +120,28 @@ def ballCheck(a, b, c, d):
         yPos=350
         paddleY[1]=275
         paddleY[0]=275
-        rVal=random.randrange(-2, 2)
-        dVal=random.randrange(-2, 2)
-        if rVal<0:
-            goingRight=rVal-4
-        elif rVal>=0:
-            goingRight=rVal+4
-            
-        if dVal<0:
-            goingDown=dVal-4
-        elif dVal>=0:
-            goingDown=dVal+4
+        goingRight=randomizeMovement(0,startspeedR*1.5)
+        goingDown=randomizeMovement(0,startspeedD*1.5) 
+        while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
+            goingRight=randomizeMovement(0,startspeedR*1.5)
+            goingDown=randomizeMovement(0,startspeedD*0.7) #alex this is much much better than your code b/c it takes the origi
             
         val=simTester(False, xPos, yPos, goingRight, goingDown)
+        
         pause=True
         
     if xPos<=30:
+        scoreR+=1
         xPos=500
         yPos=350
         paddleY[0]=275
         paddleY[1]=275
-        '''goingRight=randomizeMovement(0,startspeedR*1.5)
+        goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
-            goingRight=randomizeMovement(0,22)-11
-            goingDown=randomizeMovement(0,22)-11'''
-        rVal=random.randrange(-2, 2)
-        dVal=random.randrange(-2, 2)
-        if rVal<0:
-            goingRight=rVal-4
-        elif rVal>=0:
-            goingRight=rVal+4
-            
-        if dVal<0:
-            goingDown=dVal-4
-        elif dVal>=0:
-            goingDown=dVal+4
-        scoreR+=1
+            goingRight=randomizeMovement(0,startspeedR*1.5)
+            goingDown=randomizeMovement(0,startspeedD*0.7) #alex this is much much better than your code b/c it takes the original speed into consideration
+
         
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         
@@ -257,22 +247,22 @@ while not end:
                 UP=False
             if event.key==K_DOWN:
                 DOWN=False
-
-    if not CPU2:
-        if W:
-            paddleY[0]-=paddleSpeed[0]
-            if paddleY[0]<0: paddleY[0]=0
-        if S:
-            paddleY[0]+=paddleSpeed[0]
-            if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
-    if not (CPU1 or CPU2):
-        if UP:
-            paddleY[1]-=paddleSpeed[1]
-            if paddleY[1]<0: paddleY[1]=0
-        if DOWN:
-            paddleY[1]+=paddleSpeed[1]
-            if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
-
+    if not pause:
+        if not CPU2:
+            if W:
+                paddleY[0]-=paddleSpeed[0]
+                if paddleY[0]<0: paddleY[0]=0
+            if S:
+                paddleY[0]+=paddleSpeed[0]
+                if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
+        if not (CPU1 or CPU2):
+            if UP:
+                paddleY[1]-=paddleSpeed[1]
+                if paddleY[1]<0: paddleY[1]=0
+            if DOWN:
+                paddleY[1]+=paddleSpeed[1]
+                if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
+        
     fpsClock.tick(FPS)
 
 ################################### C H A T ###################################
@@ -283,6 +273,11 @@ ALEX: I have an idea to eliminate processing power. We can modify it so it does 
       (It may, for instance, calculate 10 frames in advance every frame, but every time work with the same data
       that it got once it hit the paddle, it just progresses in the simulation using the same data as the frames
     are progressing)
-
+GABRIEL: Your shit's fucked with fast speeds. I beat it 10-6 and the computer (doing simplest ai) beat it 10-3.
+         You probably didn't account for the ball's radius or something. Also, I fixed the points because you
+         couldn't score on one side, but occasionally it throws me     
+             values[counter][0]=xPosy
+         IndexError: list index out of range
+         so yeah, fix your shit
 '''
 ###############################################################################
