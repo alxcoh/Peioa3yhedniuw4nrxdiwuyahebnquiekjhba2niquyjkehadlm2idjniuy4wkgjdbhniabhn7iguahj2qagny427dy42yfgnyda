@@ -258,7 +258,11 @@ while not end:
 ################################### C H A T ###################################
 '''
 say your name then a colon, then message
-
+ALEX: I have an idea to eliminate processing power. We can modify it so it does a certain constant amount of
+      iterations through the prediction each frame after it hits a paddle, but it does not finish in one. 
+      (It may, for instance, calculate 10 frames in advance every frame, but every time work with the same data
+      that it got once it hit the paddle, it just progresses in the simulation using the same data as the frames
+      are progressing)
 
 '''
 ###############################################################################
