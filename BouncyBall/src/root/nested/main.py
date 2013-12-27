@@ -178,7 +178,7 @@ while not end:
     screen.blit(regularFont.render(str(scoreR), 0, BLUE.ROYALBLUE.full),(923,50))
     pygame.display.flip()
     pygame.display.update()
-    CPUTIME(val)    
+    if CPU1: CPUTIME(val)    
     
     for event in pygame.event.get():
         if event.type == QUIT:
