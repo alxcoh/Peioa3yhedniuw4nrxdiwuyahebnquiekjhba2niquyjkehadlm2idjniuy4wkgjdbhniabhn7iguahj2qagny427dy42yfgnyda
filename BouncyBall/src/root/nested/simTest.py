@@ -45,7 +45,6 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
             
             if xPosy>=940:
                 hit=True
-                print 'Expexted: ', yPosy
                 return yPosy            
 
 def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is left, true is right
