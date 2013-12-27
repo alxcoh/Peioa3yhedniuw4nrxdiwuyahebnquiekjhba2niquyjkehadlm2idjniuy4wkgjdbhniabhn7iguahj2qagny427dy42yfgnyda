@@ -18,7 +18,7 @@ CPU2=False
 loopnum=1
 yPos=400.0
 xPos=450.0
-maxDown=15.0
+maxDown=10.0
 maxRight=50.0
 startspeedD=8
 startspeedR=8
@@ -81,9 +81,14 @@ def ballCheck(a, b, c, d):
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
+        
         goingRight=-goingRight
+        if goingRight>=0:
+            goingRight+=random.randrange(0, 3)
+        elif goingRight<0:
+            goingRight-=random.randrange(0, 3)
         goingDown+=random.randint(-randomness, randomness)
-        goingRight=randomizeMovement(goingRight,3)
+
         global val
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         if xPos>=930:
@@ -92,20 +97,43 @@ def ballCheck(a, b, c, d):
             xPos=80
     if xPos>=970:
         scoreL+=1
+        print 'Expected: ', val
+        print 'Real: ', yPos
         xPos=450
         yPos=400
-        goingRight=randomizeMovement(0,22)-11
-        goingDown=randomizeMovement(0,22)-11
+        rVal=random.randrange(-2, 2)
+        dVal=random.randrange(-2, 2)
+        if rVal<0:
+            goingRight=rVal-4
+        elif rVal>=0:
+            goingRight=rVal+4
+            
+        if dVal<0:
+            goingDown=dVal-4
+        elif dVal>=0:
+            goingDown=dVal+4
+            
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
     if xPos<=30:
         xPos=450
         yPos=400
-        goingRight=randomizeMovement(0,startspeedR*1.5)
+        '''goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
             goingRight=randomizeMovement(0,22)-11
-            goingDown=randomizeMovement(0,22)-11
+            goingDown=randomizeMovement(0,22)-11'''
+        rVal=random.randrange(-2, 2)
+        dVal=random.randrange(-2, 2)
+        if rVal<0:
+            goingRight=rVal-4
+        elif rVal>=0:
+            goingRight=rVal+4
+            
+        if dVal<0:
+            goingDown=dVal-4
+        elif dVal>=0:
+            goingDown=dVal+4
         scoreR+=1
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
@@ -145,7 +173,6 @@ s.set_alpha(2)                # alpha level
 s.fill((255,255,255))           # this fills the entire surface
 
 val=simTester(False, xPos, yPos, goingRight, goingDown)
-print val
 while not end:
     if not pause: # ingame
         if goingDown>maxDown:
@@ -153,8 +180,10 @@ while not end:
         if goingDown<-maxDown:
             goingDown=-maxDown
         if goingRight>maxRight:
+            print 'maxed'
             goingRight=maxRight
         if goingRight<-maxRight:
+            print 'minned'
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
