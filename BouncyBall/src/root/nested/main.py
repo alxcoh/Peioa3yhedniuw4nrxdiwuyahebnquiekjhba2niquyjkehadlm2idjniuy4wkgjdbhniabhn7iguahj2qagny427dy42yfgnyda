@@ -18,7 +18,7 @@ CPU2=False
 loopnum=1
 yPos=400.0
 xPos=450.0
-maxDown=50.0
+maxDown=30.0
 maxRight=50.0
 startspeedD=8
 startspeedR=8
@@ -96,6 +96,7 @@ def ballCheck(a, b, c, d):
         yPos=400
         goingRight=randomizeMovement(0,22)-11
         goingDown=randomizeMovement(0,22)-11
+        val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
     if xPos<=30:
         xPos=450
@@ -106,7 +107,7 @@ def ballCheck(a, b, c, d):
             goingRight=randomizeMovement(0,22)-11
             goingDown=randomizeMovement(0,22)-11
         scoreR+=1
-        #CPUTIME(False)
+        val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
         
     return goingDown, goingRight
