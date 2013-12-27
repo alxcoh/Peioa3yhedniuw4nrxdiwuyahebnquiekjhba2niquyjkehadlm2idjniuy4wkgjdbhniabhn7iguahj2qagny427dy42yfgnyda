@@ -18,7 +18,7 @@ CPU2=False
 loopnum=1
 yPos=350.0
 xPos=500.0
-maxDown=10.0
+maxDown=15.0
 maxRight=50.0
 startspeedD=8
 startspeedR=8
@@ -36,7 +36,7 @@ paddleHeight=[150, 150]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 3]
+paddleSpeed=[10, 5]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
