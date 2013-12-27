@@ -165,11 +165,6 @@ def CPUTIME(value):
     elif paddleY[1]+75<value:
         #print 'goingDown'
         paddleY[1]+=paddleSpeed[1]
-    if xPos>750:
-        if yPos>paddleY[1]+75:
-            paddleY[1]+=paddleSpeed[1]
-        elif yPos<paddleY[1]+75:
-            paddleY[1]-=paddleSpeed[1]
 regularFont = pygame.font.Font(None,60)
 bigFont = pygame.font.Font(None, 240)
 
