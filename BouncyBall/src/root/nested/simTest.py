@@ -44,7 +44,6 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
                 xVel*=-1.0
                 xPosy=80
             
-            
             xPosy+=xVel
             yPosy+=yVel
             
