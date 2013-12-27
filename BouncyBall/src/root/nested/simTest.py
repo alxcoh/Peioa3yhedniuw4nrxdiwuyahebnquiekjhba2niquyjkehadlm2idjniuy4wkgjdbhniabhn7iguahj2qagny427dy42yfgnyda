@@ -30,7 +30,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
             
             if xPosy>=940:
                 hit=True
-                return yPosy  
+                return yPosy
             
             if yPosy>=660:
                 yVel=-yVel
@@ -47,7 +47,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
             xPosy+=xVel
             yPosy+=yVel
             
-                      
+                        
 
 def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is left, true is right
     '''more natural to me because physics
