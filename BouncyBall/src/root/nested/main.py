@@ -21,22 +21,22 @@ xPos=500.0
 maxDown=10.0
 maxRight=50.0
 startspeedD=8
-startspeedR=8
+startspeedR=-15
 goingDown=8.0
-goingRight=8.0
+goingRight=-15.0
 W=False
 S=False
 UP=False
 DOWN=False
-randomness=4 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
+randomness=0 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
-paddleHeight=[200, 150]
+paddleHeight=[150, 150]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 4]
+paddleSpeed=[10, 3]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -77,10 +77,10 @@ def ballCheck(a, b, c, d):
     if yPos>=660 or yPos<=40:
         goingDown=-goingDown
         if yPos>=660:
-            print 'BOUCE TOP:', xPos, yPos, goingRight, goingDown
+            print 'BOUNCE TOP:', xPos, yPos, goingRight, goingDown
             yPos=650
         else:
-            print 'BOUCE BOT:', xPos, yPos, goingRight, goingDown
+            print 'BOUNCE BOT:', xPos, yPos, goingRight, goingDown
             yPos=50
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
