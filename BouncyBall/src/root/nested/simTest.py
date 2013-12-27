@@ -5,7 +5,6 @@ Created on Dec 26, 2013
 '''
 def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
     hit=False #if the sim reaches its end
-    print 'finding'
     side=side
     xPosy=xPosy
     yPosy=yPosy
@@ -37,7 +36,6 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
                  
                 if xPosy<=60:
                     goingRight=True    
-                    print 'direction switched'
                 
                 if goingDown==True:
                     if startY==True:
@@ -61,6 +59,4 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
                         xPosy-=xVel
                     elif start==False:
                         xPosy+=xVel
-                if yPosy>670:
-                    print 'Got above: ', xPosy
                                 
