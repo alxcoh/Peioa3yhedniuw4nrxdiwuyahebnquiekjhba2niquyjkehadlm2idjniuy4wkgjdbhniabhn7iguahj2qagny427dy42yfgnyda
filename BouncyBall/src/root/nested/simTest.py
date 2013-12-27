@@ -11,6 +11,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
     yPosy=yPosy
     xVel=xVel
     yVel=yVel
+    '''
     if yVel>=0:
         goingDown=True
         startY=True
@@ -23,46 +24,29 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
     else:
         goingRight=False
         start=False
+    '''
     if side==False:
         while hit==False:
+            
+            if yPosy>=660:
+                yVel=-yVel
+                yPosy=650
+                
+            if yPosy<=40:
+                yVel=-yVel
+                yPosy=50
+
+            if xPosy<=60:
+                xVel=-xVel
+                xPosy=80
+                
+            xPosy+=xVel
+            yPosy+=yVel
+            
             if xPosy>=940:
                 hit=True
                 print 'Expexted: ', yPosy
-                return yPosy
-            else:
-                if yPosy>=660:
-                    goingDown=False
-                    yPosy=650
-                if yPosy<=40:
-                    goingDown=True
-                    yPosy=50
-                if xPosy<=60:
-                    goingRight=True    
-                
-                if goingDown==True:
-                    if startY==True:
-                        yPosy+=yVel
-                    if startY==False:
-                        yPosy-=yVel
-                if goingDown==False:
-                    if startY==True:
-                        yPosy-=yVel
-                    if startY==False:
-                        yPosy+=yVel
-                    
-                if goingRight==True:
-                    if start==True:
-                        xPosy+=xVel
-                    elif start==False:
-                        xPosy-=xVel
-                
-                if goingRight==False:
-                    if start==True:
-                        xPosy-=xVel
-                    elif start==False:
-                        xPosy+=xVel
-
-                                
+                return yPosy            
 
 def FORESEETHEFUTURE (side, x, y, Vx, Vy, sizeX, sizeY, paddleSize): #false is left, true is right
     '''more natural to me because physics

@@ -92,12 +92,14 @@ def ballCheck(a, b, c, d):
             goingRight-=random.randrange(0, 3)
         goingDown+=random.randint(-randomness, randomness)
 
-        global val
-        val=simTester(False, xPos, yPos, goingRight, goingDown)
+        
         if xPos>=930:
             xPos=920
         if xPos<=70:
             xPos=80
+            
+        global val
+        val=simTester(False, xPos, yPos, goingRight, goingDown)
     if xPos>=970:
         #print 'Expected: ', val
         print 'Real: ', yPos
