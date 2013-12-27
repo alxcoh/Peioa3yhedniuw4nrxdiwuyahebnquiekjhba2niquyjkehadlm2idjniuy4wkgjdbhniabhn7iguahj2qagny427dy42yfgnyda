@@ -97,7 +97,7 @@ def ballCheck(a, b, c, d):
         global val
         val=simTester(False, xPos, yPos, goingRight, goingDown)
     if xPos>=970:
-        #print 'Expected: ', val
+        print 'Expected: ', val
         print 'Real: ', yPos
         print 'Difference: ', val-yPos
         scoreL+=1
