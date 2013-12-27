@@ -98,6 +98,8 @@ def ballCheck(a, b, c, d):
         scoreL+=1
         xPos=450
         yPos=400
+        paddleY[1]=275
+        paddleY[0]=275
         rVal=random.randrange(-2, 2)
         dVal=random.randrange(-2, 2)
         if rVal<0:
@@ -115,6 +117,8 @@ def ballCheck(a, b, c, d):
     if xPos<=30:
         xPos=450
         yPos=400
+        paddleY[0]=275
+        paddleY[1]=275
         '''goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
