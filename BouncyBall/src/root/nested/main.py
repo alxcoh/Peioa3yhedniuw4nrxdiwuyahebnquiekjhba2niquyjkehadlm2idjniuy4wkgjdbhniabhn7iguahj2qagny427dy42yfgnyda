@@ -13,8 +13,10 @@ scoreR=0
 pause=False
 end=False
 crazyball=False #  :D
-CPU1=True
-CPU2=False
+CPUL=True
+CPUR=False
+CPULWantedY=-1
+CPURWantedY=-1
 loopnum=1
 yPos=400.0
 xPos=450.0
@@ -50,12 +52,21 @@ def paddleTouched():
     return 0    
         
 def CPUTIME(value):
-    if paddleY[1]+75>value:
-        #print 'goingUp'
-        paddleY[1]-=paddleSpeed[1]
-    elif paddleY[1]+75<value:
-        #print 'goingdown'
-        paddleY[1]+=paddleSpeed[1]
+    if CPUR:
+        if paddleY[1]+paddleHeight[1]/2>value:
+            #print 'goingUp'
+            paddleY[1]-=paddleSpeed[1]
+        elif paddleY[1]+paddleHeight[1]/2<value:
+            #print 'goingdown'
+            paddleY[1]+=paddleSpeed[1]
+    if CPUL:
+        if paddleY[0]+paddleHeight[0]/2>value:
+            #print 'goingUp'
+            paddleY[0]-=paddleSpeed[0]
+        elif paddleY[0]+paddleHeight[0]/2<value:
+            #print 'goingdown'
+            paddleY[0]+=paddleSpeed[0]
+        
 def randomizeMovement(mvt, rand):
     return mvt + random.randrange(rand)
 
@@ -68,6 +79,8 @@ def ballCheck(a, b, c, d):
     global scoreL
     global scoreR
     global pause
+    global CPURWantedY
+    global CPULWantedY
     goingDown=a
     goingRight=b
     xPos=c
@@ -79,13 +92,18 @@ def ballCheck(a, b, c, d):
         else:
             yPos=50
 
-    paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
+    paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 2 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
         goingRight=-goingRight
         goingDown+=random.randint(-randomness, randomness)
         goingRight=randomizeMovement(goingRight,3)
-        global val
-        val=simTester(False, xPos, yPos, goingRight, goingDown)
+        #global val
+        #val=simTester(False, xPos, yPos, goingRight, goingDown)
+        if paddleTouchedVal==2:
+            CPURWantedY=FORESEETHEFUTURE (True, xPos, yPos, goingRight, goingDown, 900, 720, paddleHeight[1]) #approximate whatever stuff
+        if paddleTouchedVal==1:
+            CPULWantedY=FORESEETHEFUTURE (False, xPos, yPos, goingRight, goingDown, 900, 720, paddleHeight[0]) #approximate whatever stuff
+    
         if xPos>=930:
             xPos=920
         if xPos<=70:
@@ -179,8 +197,11 @@ while not end:
     screen.blit(regularFont.render(str(scoreR), 0, BLUE.ROYALBLUE.full),(923,50))
     pygame.display.flip()
     pygame.display.update()
-    if CPU1: CPUTIME(val)    
-    
+   # if CPULWANTEDY: CPUTIME(val)  
+    if CPUL and CPULWantedY==-1: CPUTIME(yPos)
+    elif CPUL: CPUTIME(CPULWantedY)
+    if CPUR and CPURWantedY==-1: CPUTIME(yPos)
+    elif CPUR: CPUTIME(CPURWantedY)
     for event in pygame.event.get():
         if event.type == QUIT:
             end=True
@@ -210,14 +231,14 @@ while not end:
             if event.key==K_DOWN:
                 DOWN=False
 
-    if not CPU2:
+    if not CPUL:
         if W:
             paddleY[0]-=paddleSpeed[0]
             if paddleY[0]<0: paddleY[0]=0
         if S:
             paddleY[0]+=paddleSpeed[0]
             if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
-    if not (CPU1 or CPU2):
+    if not CPUR:
         if UP:
             paddleY[1]-=paddleSpeed[1]
             if paddleY[1]<0: paddleY[1]=0
