@@ -83,10 +83,10 @@ def ballCheck(a, b, c, d):
     if yPos>=660 or yPos<=40:
         goingDown=-goingDown
         if yPos>=660:
-            print 'BOUNCE TOP:', xPos, yPos, goingRight, goingDown
+            print 'BOUNCE BOT:', xPos, yPos, goingRight, goingDown
             yPos=650
         else:
-            print 'BOUNCE BOT:', xPos, yPos, goingRight, goingDown
+            print 'BOUNCE TOP:', xPos, yPos, goingRight, goingDown
             yPos=50
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 2 is left touched
