@@ -241,22 +241,22 @@ while not end:
                 UP=False
             if event.key==K_DOWN:
                 DOWN=False
-
-    if not CPU2:
-        if W:
-            paddleY[0]-=paddleSpeed[0]
-            if paddleY[0]<0: paddleY[0]=0
-        if S:
-            paddleY[0]+=paddleSpeed[0]
-            if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
-    if not (CPU1 or CPU2):
-        if UP:
-            paddleY[1]-=paddleSpeed[1]
-            if paddleY[1]<0: paddleY[1]=0
-        if DOWN:
-            paddleY[1]+=paddleSpeed[1]
-            if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
-
+    if not pause:
+        if not CPU2:
+            if W:
+                paddleY[0]-=paddleSpeed[0]
+                if paddleY[0]<0: paddleY[0]=0
+            if S:
+                paddleY[0]+=paddleSpeed[0]
+                if paddleY[0]+paddleHeight[0]>700: paddleY[0]=700-paddleHeight[0]
+        if not (CPU1 or CPU2):
+            if UP:
+                paddleY[1]-=paddleSpeed[1]
+                if paddleY[1]<0: paddleY[1]=0
+            if DOWN:
+                paddleY[1]+=paddleSpeed[1]
+                if paddleY[1]+paddleHeight[1]>700: paddleY[1]=700-paddleHeight[1]
+        
     fpsClock.tick(FPS)
 
 ################################### C H A T ###################################
