@@ -20,7 +20,7 @@ CPURWantedY=-1
 loopnum=1
 yPos=400.0
 xPos=450.0
-maxDown=15.0
+maxDown=10.0
 maxRight=50.0
 startspeedD=8
 startspeedR=8
@@ -51,6 +51,7 @@ def paddleTouched():
         return 2
     return 0    
         
+<<<<<<< HEAD
 def CPUTIME(value):
     if CPUR:
         if paddleY[1]+paddleHeight[1]/2>value:
@@ -67,6 +68,9 @@ def CPUTIME(value):
             #print 'goingdown'
             paddleY[0]+=paddleSpeed[0]
         
+=======
+
+>>>>>>> 8ac113c53ee0734c59c92e2ff9ba9ed56c1ab326
 def randomizeMovement(mvt, rand):
     return mvt + random.randrange(rand)
 
@@ -95,7 +99,12 @@ def ballCheck(a, b, c, d):
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 2 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
         goingRight=-goingRight
+        if goingRight>=0:
+            goingRight+=random.randrange(0, 3)
+        elif goingRight<0:
+            goingRight-=random.randrange(0, 3)
         goingDown+=random.randint(-randomness, randomness)
+<<<<<<< HEAD
         goingRight=randomizeMovement(goingRight,3)
         #global val
         #val=simTester(False, xPos, yPos, goingRight, goingDown)
@@ -104,6 +113,11 @@ def ballCheck(a, b, c, d):
         if paddleTouchedVal==1:
             CPULWantedY=FORESEETHEFUTURE (False, xPos, yPos, goingRight, goingDown, 900, 720, paddleHeight[0]) #approximate whatever stuff
     
+=======
+
+        global val
+        val=simTester(False, xPos, yPos, goingRight, goingDown)
+>>>>>>> 8ac113c53ee0734c59c92e2ff9ba9ed56c1ab326
         if xPos>=930:
             xPos=920
         if xPos<=70:
@@ -112,18 +126,43 @@ def ballCheck(a, b, c, d):
         scoreL+=1
         xPos=450
         yPos=400
-        goingRight=randomizeMovement(0,22)-11
-        goingDown=randomizeMovement(0,22)-11
+        paddleY[1]=275
+        paddleY[0]=275
+        rVal=random.randrange(-2, 2)
+        dVal=random.randrange(-2, 2)
+        if rVal<0:
+            goingRight=rVal-4
+        elif rVal>=0:
+            goingRight=rVal+4
+            
+        if dVal<0:
+            goingDown=dVal-4
+        elif dVal>=0:
+            goingDown=dVal+4
+            
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
     if xPos<=30:
         xPos=450
         yPos=400
-        goingRight=randomizeMovement(0,startspeedR*1.5)
+        paddleY[0]=275
+        paddleY[1]=275
+        '''goingRight=randomizeMovement(0,startspeedR*1.5)
         goingDown=randomizeMovement(0,startspeedD*1.5) 
         while not (goingRight<-startspeedR/2 or goingRight>startspeedR/2) and not (goingDown<-startspeedD/2 or goingDown>startspeedD/2):
             goingRight=randomizeMovement(0,22)-11
-            goingDown=randomizeMovement(0,22)-11
+            goingDown=randomizeMovement(0,22)-11'''
+        rVal=random.randrange(-2, 2)
+        dVal=random.randrange(-2, 2)
+        if rVal<0:
+            goingRight=rVal-4
+        elif rVal>=0:
+            goingRight=rVal+4
+            
+        if dVal<0:
+            goingDown=dVal-4
+        elif dVal>=0:
+            goingDown=dVal+4
         scoreR+=1
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
@@ -151,6 +190,15 @@ def ballMove(a, b, c, d):
     yPos+=goingDown
     return xPos, yPos
 
+def CPUTIME(value):
+    global xPos
+    global yPos
+    if paddleY[1]+75>value:
+        #print 'goingUp'
+        paddleY[1]-=paddleSpeed[1]
+    elif paddleY[1]+75<value:
+        #print 'goingDown'
+        paddleY[1]+=paddleSpeed[1]
 regularFont = pygame.font.Font(None,60)
 bigFont = pygame.font.Font(None, 240)
 
@@ -163,7 +211,6 @@ s.set_alpha(2)                # alpha level
 s.fill((255,255,255))           # this fills the entire surface
 
 val=simTester(False, xPos, yPos, goingRight, goingDown)
-print val
 while not end:
     if not pause: # ingame
         if goingDown>maxDown:
@@ -251,7 +298,11 @@ while not end:
 ################################### C H A T ###################################
 '''
 say your name then a colon, then message
-
+ALEX: I have an idea to eliminate processing power. We can modify it so it does a certain constant amount of
+      iterations through the prediction each frame after it hits a paddle, but it does not finish in one. 
+      (It may, for instance, calculate 10 frames in advance every frame, but every time work with the same data
+      that it got once it hit the paddle, it just progresses in the simulation using the same data as the frames
+      are progressing)
 
 '''
 ###############################################################################
