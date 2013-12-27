@@ -28,7 +28,7 @@ W=False
 S=False
 UP=False
 DOWN=False
-randomness=0 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
+randomness=4 #if you actually want to play crazyball, set this at 4-6 for regular, 6-10 is madness, 10-20 for insanity
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
@@ -36,7 +36,7 @@ paddleHeight=[150 for i in range(2)]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 10]
+paddleSpeed=[10, 5]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -68,6 +68,7 @@ def ballCheck(a, b, c, d):
     global scoreL
     global scoreR
     global pause
+    global val
     goingDown=a
     goingRight=b
     xPos=c
@@ -81,12 +82,16 @@ def ballCheck(a, b, c, d):
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
+        if paddleTouchedVal==1:
+            print 'Expected: ', val
+            print 'Real: ', yPos
+            print 'Difference: ', val-yPos
         goingRight=-goingRight
         if goingRight>=0:
-            goingRight+=random.randrange(0, randomness)
+            goingRight+=random.randrange(0, randomness+1)
         elif goingRight<0:
-            goingRight-=random.randrange(0, randomness)
-        goingDown+=random.randint(-randomness, randomness)
+            goingRight-=random.randrange(0, randomness+1)
+        goingDown+=random.randint(-randomness, randomness+1)
 
         
         if xPos>=930:
@@ -94,8 +99,8 @@ def ballCheck(a, b, c, d):
         if xPos<=70:
             xPos=80
             
-        global val
         val=simTester(False, xPos, yPos, goingRight, goingDown)
+        
     if xPos>=970:
         print 'Expected: ', val
         print 'Real: ', yPos
@@ -117,7 +122,6 @@ def ballCheck(a, b, c, d):
         elif dVal>=0:
             goingDown=dVal+4
             
-        global val
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         pause=True
         
@@ -144,7 +148,6 @@ def ballCheck(a, b, c, d):
             goingDown=dVal+4
         scoreR+=1
         
-        global val
         val=simTester(False, xPos, yPos, goingRight, goingDown)
         
         pause=True
