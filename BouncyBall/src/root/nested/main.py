@@ -83,9 +83,9 @@ def ballCheck(a, b, c, d):
     if paddleTouchedVal==1 or paddleTouchedVal==2:
         goingRight=-goingRight
         if goingRight>=0:
-            goingRight+=random.randrange(0, 3)
+            goingRight+=random.randrange(0, randomness)
         elif goingRight<0:
-            goingRight-=random.randrange(0, 3)
+            goingRight-=random.randrange(0, randomness)
         goingDown+=random.randint(-randomness, randomness)
 
         
