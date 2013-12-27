@@ -24,15 +24,17 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
         start=False
     if side==False:
         while hit==False:
-            if xPosy>=970:
+            if xPosy>=940:
                 hit=True
+                print 'Expexted: ', yPosy
                 return yPosy
             else:
-                if yPosy>670:
+                if yPosy>=660:
                     goingDown=False
-                elif yPosy<30:
+                    yPosy=650
+                if yPosy<=40:
                     goingDown=True
-                 
+                    yPosy=50
                 if xPosy<=60:
                     goingRight=True    
                 
@@ -41,7 +43,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
                         yPosy+=yVel
                     if startY==False:
                         yPosy-=yVel
-                elif goingDown==False:
+                if goingDown==False:
                     if startY==True:
                         yPosy-=yVel
                     if startY==False:
@@ -53,9 +55,12 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
                     elif start==False:
                         xPosy-=xVel
                 
-                elif goingRight==False:
+                if goingRight==False:
                     if start==True:
                         xPosy-=xVel
                     elif start==False:
                         xPosy+=xVel
+                
+                if yPosy>700 or yPosy<0:
+                    print '*************'
                                 
