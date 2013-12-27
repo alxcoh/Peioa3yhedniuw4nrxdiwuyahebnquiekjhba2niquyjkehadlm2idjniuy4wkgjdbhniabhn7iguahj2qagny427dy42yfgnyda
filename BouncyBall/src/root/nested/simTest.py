@@ -5,6 +5,7 @@ Created on Dec 26, 2013
 '''
 def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
     hit=False #if the sim reaches its end
+    print 'finding'
     side=side
     xPosy=xPosy
     yPosy=yPosy
@@ -12,22 +13,54 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right
     yVel=yVel
     if yVel>=0:
         goingDown=True
-    else:
+        startY=True
+    elif yVel<0:
         goingDown=False
+        startY=False
+    if xVel>=0:
+        goingRight=True
+        start=True
+    else:
+        goingRight=False
+        start=False
     if side==False:
         while hit==False:
             if xPosy>=970:
                 hit=True
-                print yPosy+75
-                return yPosy+75
+                print yPosy
+                return yPosy
             else:
-                if goingDown==True:
-                    yPosy+=yVel
-                elif goingDown==False:
-                    yPosy-=yVel
                 if yPosy>670:
                     goingDown=False
                 elif yPosy<30:
                     goingDown=True
-                xPosy+=xVel
+                 
+                if xPosy<=60:
+                    goingRight=True    
+                    print 'direction switched'
+                
+                if goingDown==True:
+                    if startY==True:
+                        yPosy+=yVel
+                    if startY==False:
+                        yPosy-=yVel
+                elif goingDown==False:
+                    if startY==True:
+                        yPosy-=yVel
+                    if startY==False:
+                        yPosy+=yVel
+                    
+                if goingRight==True:
+                    if start==True:
+                        xPosy+=xVel
+                    elif start==False:
+                        xPosy-=xVel
+                
+                elif goingRight==False:
+                    if start==True:
+                        xPosy-=xVel
+                    elif start==False:
+                        xPosy+=xVel
+                if yPosy>670:
+                    print 'Got above: ', xPosy
                                 
