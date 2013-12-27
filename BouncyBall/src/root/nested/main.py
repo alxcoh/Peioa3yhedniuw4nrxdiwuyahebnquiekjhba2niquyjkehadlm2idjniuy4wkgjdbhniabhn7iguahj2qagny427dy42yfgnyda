@@ -49,7 +49,13 @@ def paddleTouched():
         return 2
     return 0    
         
-
+def CPUTIME(value):
+    if paddleY[1]+75>value:
+        #print 'goingUp'
+        paddleY[1]-=paddleSpeed[1]
+    elif paddleY[1]+75<value:
+        #print 'goingDown'
+        paddleY[1]+=paddleSpeed[1]
 def randomizeMovement(mvt, rand):
     return mvt + random.randrange(rand)
 
@@ -75,6 +81,10 @@ def ballCheck(a, b, c, d):
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 0 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
+        if paddleTouchedVal==1:
+            print 'Expected: ', val
+            print 'Real: ', yPos
+            print 'Difference: ', val-yPos
         goingRight=-goingRight
         if goingRight>=0:
             goingRight+=random.randrange(0, 3)
@@ -89,6 +99,9 @@ def ballCheck(a, b, c, d):
         if xPos<=70:
             xPos=80
     if xPos>=970:
+        #print 'Expected: ', val
+        print 'Real: ', yPos
+        print 'Difference: ', val-yPos
         scoreL+=1
         xPos=450
         yPos=400
@@ -156,15 +169,6 @@ def ballMove(a, b, c, d):
     yPos+=goingDown
     return xPos, yPos
 
-def CPUTIME(value):
-    global xPos
-    global yPos
-    if paddleY[1]+75>value:
-        #print 'goingUp'
-        paddleY[1]-=paddleSpeed[1]
-    elif paddleY[1]+75<value:
-        #print 'goingDown'
-        paddleY[1]+=paddleSpeed[1]
 regularFont = pygame.font.Font(None,60)
 bigFont = pygame.font.Font(None, 240)
 
@@ -176,7 +180,7 @@ s = pygame.Surface((1000,750))  # the size of your rect
 s.set_alpha(2)                # alpha level
 s.fill((255,255,255))           # this fills the entire surface
 
-val=simTester(False, xPos, yPos, goingRight, goingDown)
+val=simTester(False, 500, 450, goingRight, goingDown)
 while not end:
     if not pause: # ingame
         if goingDown>maxDown:
@@ -265,7 +269,7 @@ ALEX: I have an idea to eliminate processing power. We can modify it so it does 
       iterations through the prediction each frame after it hits a paddle, but it does not finish in one. 
       (It may, for instance, calculate 10 frames in advance every frame, but every time work with the same data
       that it got once it hit the paddle, it just progresses in the simulation using the same data as the frames
-      are progressing)
+    are progressing)
 
 '''
 ###############################################################################
