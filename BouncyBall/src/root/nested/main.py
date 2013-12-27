@@ -32,7 +32,7 @@ randomness=4 #if you actually want to play crazyball, set this at 4-6 for regula
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
-paddleHeight=[150 for i in range(2)]
+paddleHeight=[200, 150]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
