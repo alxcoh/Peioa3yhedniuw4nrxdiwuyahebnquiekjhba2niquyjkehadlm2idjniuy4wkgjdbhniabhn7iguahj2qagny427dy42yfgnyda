@@ -71,6 +71,19 @@ class YELLOW(color):
     GOLDENROD = color(218, 165, 32)
     KHAKI = color(195, 176, 145)
     
+    
+def concentricCircle(surface, colors, centers, radiuses):
+    colors=colors
+    centers=centers
+    radiuses=radiuses
+    if len(colors)!=len(radiuses):
+        print 'Concentric circles not consistent'
+        return 
+    
+    for i in range(len(radiuses)):
+        pygame.draw.circle(surface, colors[i], centers, radiuses[i])
+    
+    return
 #color definitions
 
 BLACK = color(0, 0, 0)
