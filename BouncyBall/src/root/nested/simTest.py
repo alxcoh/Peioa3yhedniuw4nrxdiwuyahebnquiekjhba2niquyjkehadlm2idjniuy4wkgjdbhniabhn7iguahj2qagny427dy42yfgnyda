@@ -13,7 +13,7 @@ def simTester(side, xPosy, yPosy, xVel, yVel): #0 is left 1 is right, DASCH IST 
     yPosy=yPosy
     xVel=xVel
     yVel=yVel
-    maxDown=15
+    maxDown=50
     maxRight=50
     
     if yVel>maxDown:
