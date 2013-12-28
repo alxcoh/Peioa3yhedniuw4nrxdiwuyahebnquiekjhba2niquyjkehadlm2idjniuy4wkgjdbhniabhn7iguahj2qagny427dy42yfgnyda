@@ -18,7 +18,7 @@ CPU2=False
 loopnum=1
 yPos=350.0
 xPos=500.0
-maxDown=15.0
+maxDown=50.0
 maxRight=50.0
 startspeedD=8
 startspeedR=8
@@ -38,11 +38,11 @@ randomness=3 #if you actually want to play crazyball, set this at 4-6 for regula
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
-paddleHeight=[150, 150]
+paddleHeight=[200, 150]
 
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 5]
+paddleSpeed=[10, 2.5]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -50,19 +50,27 @@ paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
 
 def paddleTouched():
     if xPos>=940 and yPos>=paddleY[1]-30 and yPos<=paddleY[1]+paddleHeight[1]+30:
-        print yPos 
+        #print yPos 
         return 1
     if xPos<=60 and yPos>=paddleY[0]-30 and yPos<=paddleY[0]+paddleHeight[0]+30:
         return 2
     return 0    
         
-def CPUTIME(value):
-    if paddleY[1]+75>value:
+def CPUTIME(value, howMany): #tru is both, false is just right
+    if paddleY[1]+(paddleHeight[1]/2)>value:
         #print 'goingUp'
         paddleY[1]-=paddleSpeed[1]
-    elif paddleY[1]+75<value:
+    elif paddleY[1]+(paddleHeight[1]/2)<value:
         #print 'goingDown'
         paddleY[1]+=paddleSpeed[1]
+        
+    if howMany:
+        if paddleY[0]+(paddleHeight[0]/2)>yPos:
+            paddleY[0]-=paddleSpeed[0]
+        
+        if paddleY[0]+(paddleHeight[0]/2)<yPos:
+            paddleY[0]+=paddleSpeed[0]
+        
 def randomizeMovement(mvt, rand):
     return mvt + random.randrange(0, rand)
 
@@ -76,6 +84,10 @@ def ballCheck(a, b, c, d):
     global scoreR
     global pause
     global val
+    global passed
+    passed=False
+    global passy
+    passy=False
     goingDown=a
     goingRight=b
     xPos=c
@@ -83,26 +95,36 @@ def ballCheck(a, b, c, d):
     if yPos>=660 or yPos<=40:
         goingDown=-goingDown
         if yPos>=660:
-            print 'BOUNCE BOT:', xPos, yPos, goingRight, goingDown
+            #print 'BOUNCE BOT:', xPos, yPos, goingRight, goingDown
             yPos=650
         else:
-            print 'BOUNCE TOP:', xPos, yPos, goingRight, goingDown
+            #print 'BOUNCE TOP:', xPos, yPos, goingRight, goingDown
             yPos=50
 
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 2 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
         if paddleTouchedVal==1:
+            '''
             print 'Expected: ', val
             print 'Real: ', yPos, goingRight, goingDown
             print 'Difference: ', val-yPos
+            '''
+            pass
         
         goingRight=-goingRight
+        randVal=random.randrange(0, randomness+1)
         if goingRight>=0:
-            goingRight+=random.randrange(0, randomness+1)
+            goingRight+=randVal
         elif goingRight<0:
-            goingRight-=random.randrange(0, randomness+1)
+            goingRight-=randVal
+        if goingDown>=0:
+            goingDown+=randVal
+        elif goingDown<0:
+            goingDown-=randVal 
+        
         goingDown+=random.randint(-randomness, randomness+1)
 
+        passy=False
         
         if xPos>=930:
             xPos=920
@@ -111,6 +133,15 @@ def ballCheck(a, b, c, d):
         
         if CPU1==True: val=simTester(False, xPos, yPos, goingRight, goingDown)
         #val=FORESEETHEFUTURE(False,xPos,yPos,goingRight,goingDown,900,720,0)
+    
+    if (goingRight<0 and xPos<500) or (goingRight>0 and xPos>500) and not passy:
+        passed=True
+        
+    if passed==True:
+        val=simTester(False, xPos, yPos, goingRight, goingDown)
+        passed=False
+        passy=True
+    
     if xPos>=970: 
         print 'Expected: ', val
         print 'Real: ', yPos, goingRight, goingDown
@@ -225,16 +256,22 @@ while not end:
             goingRight=-maxRight
         loopnum+=1
         screen.blit(background, (0, 0))
-        background.fill(GREEN.FORESTGREEN.full)
+        background.fill(BLUE.TEAL.full)
         myBallCenterPos = (int(xPos+0.5), int(yPos+0.5)) #normally casting to int goes to next lowest int, adding 0.5 makes behavior like a roun
         goingDown, goingRight = ballCheck(goingDown, goingRight, xPos, yPos)
         xPos, yPos = ballMove(goingDown, goingRight, xPos, yPos)
         paddleLeft.top=paddleY[0]
         paddleRight.top=paddleY[1]
-        pygame.draw.circle(background, BLACK.full, myBallCenterPos, 30)
-        pygame.draw.rect(background, BLUE.AZURE.full, paddleLeft)
-        pygame.draw.rect(background, BLUE.AZURE.full, paddleRight)
-        if CPU1: CPUTIME(val)    
+        #pygame.draw.circle(background, BLACK.full, myBallCenterPos, 30)
+        concentricCircle(background, [BLACK.full, RED.FUCHSIA.full], myBallCenterPos, [30, 15])
+        pygame.draw.rect(background, YELLOW.GOLDENROD.full, paddleLeft)
+        pygame.draw.rect(background, YELLOW.GOLDENROD.full, paddleRight)
+        if CPU1: 
+            if not CPU2:
+                CPUTIME(val, False)
+            
+            if CPU2:
+                CPUTIME(val, True)
         
         
     else: # paused
@@ -243,8 +280,8 @@ while not end:
         screen.blit(pauseText, textpos) # use screen.blit to print to front apparently
     # ALL DA TIME
     
-    screen.blit(regularFont.render(str(scoreL), 0, BLUE.ROYALBLUE.full),(50,50))
-    screen.blit(regularFont.render(str(scoreR), 0, BLUE.ROYALBLUE.full),(923,50))
+    screen.blit(regularFont.render(str(scoreL), 0, BLACK.full),(50,50))
+    screen.blit(regularFont.render(str(scoreR), 0, BLACK.full),(923,50))
     pygame.display.flip()
     pygame.display.update()
     
