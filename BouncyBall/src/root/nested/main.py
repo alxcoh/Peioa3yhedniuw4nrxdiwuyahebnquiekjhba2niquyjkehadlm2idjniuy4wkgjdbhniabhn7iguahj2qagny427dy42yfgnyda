@@ -38,11 +38,12 @@ randomness=3 #if you actually want to play crazyball, set this at 4-6 for regula
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
-paddleHeight=[200, 150]
-
+paddleHeight=[150, 150]
+global passy
+passy=True
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 2.5]
+paddleSpeed=[10, 5]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -87,7 +88,6 @@ def ballCheck(a, b, c, d):
     global passed
     passed=False
     global passy
-    passy=False
     goingDown=a
     goingRight=b
     xPos=c
@@ -124,7 +124,7 @@ def ballCheck(a, b, c, d):
         
         goingDown+=random.randint(-randomness, randomness+1)
 
-        passy=False
+        passy=True
         
         if xPos>=930:
             xPos=920
@@ -134,13 +134,17 @@ def ballCheck(a, b, c, d):
         if CPU1==True: val=simTester(False, xPos, yPos, goingRight, goingDown)
         #val=FORESEETHEFUTURE(False,xPos,yPos,goingRight,goingDown,900,720,0)
     
-    if (goingRight<0 and xPos<500) or (goingRight>0 and xPos>500) and not passy:
+    if (goingRight<0 and xPos<800) and passy==True:
+        passed=True    
+    
+    if (goingRight>0 and xPos>200) and passy==True:
         passed=True
-        
+    
     if passed==True:
         val=simTester(False, xPos, yPos, goingRight, goingDown)
+        #print '****************'
         passed=False
-        passy=True
+        passy=False
     
     if xPos>=970: 
         print 'Expected: ', val
@@ -346,5 +350,10 @@ GABRIEL: Your shit's fucked with fast speeds. I beat it 10-6 and the computer (d
              values[counter][0]=xPosy
          IndexError: list index out of range
          so yeah, fix your shit
+
+ALEX: I did. It's fucking boss. The stupid AI lost  25-0 when it had a size and speed advantage. I changed it slightly i think but try your best. 
+        Give it 5 speed, yourself 10 speed, and yourself 200 height while it has 150 height and it will still beat you. Give youself
+        more advantage if you want. Right now it is set to half your speed. 
+
 '''
 ###############################################################################
