@@ -38,12 +38,12 @@ randomness=3 #if you actually want to play crazyball, set this at 4-6 for regula
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
-paddleHeight=[150, 150]
+paddleHeight=[1000, 150]
 global passy
 passy=True
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 5]
+paddleSpeed=[10, 15]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
@@ -92,6 +92,15 @@ def ballCheck(a, b, c, d):
     goingRight=b
     xPos=c
     yPos=d
+    
+    if xPos>=940:
+        '''
+        print 'Expected: ', val
+        print 'Real: ', yPos, goingRight, goingDown
+        print 'Difference: ', val-yPos
+        '''
+        pass
+    
     if yPos>=660 or yPos<=40:
         goingDown=-goingDown
         if yPos>=660:
@@ -101,16 +110,15 @@ def ballCheck(a, b, c, d):
             #print 'BOUNCE TOP:', xPos, yPos, goingRight, goingDown
             yPos=50
 
+
+    
+        
     paddleTouchedVal=paddleTouched() #0 is not touched, 1 is right touched, 2 is left touched
     if paddleTouchedVal==1 or paddleTouchedVal==2:
+        '''
         if paddleTouchedVal==1:
-            '''
-            print 'Expected: ', val
-            print 'Real: ', yPos, goingRight, goingDown
-            print 'Difference: ', val-yPos
-            '''
             pass
-        
+        '''
         goingRight=-goingRight
         randVal=random.randrange(0, randomness+1)
         if goingRight>=0:
@@ -147,9 +155,6 @@ def ballCheck(a, b, c, d):
         passy=False
     
     if xPos>=970: 
-        print 'Expected: ', val
-        print 'Real: ', yPos, goingRight, goingDown
-        print 'Difference: ', val-yPos
         scoreL+=1
         xPos=500
         yPos=350
