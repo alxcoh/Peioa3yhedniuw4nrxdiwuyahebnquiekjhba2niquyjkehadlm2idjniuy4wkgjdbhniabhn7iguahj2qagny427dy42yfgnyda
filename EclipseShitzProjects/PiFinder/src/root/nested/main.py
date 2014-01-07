@@ -5,7 +5,7 @@ Created on Dec 22, 2013
 '''
 from decimal import *
 getcontext().prec = 1
-countUpTo=10000
+countUpTo=5000
 def factorial(n):
     a=1
     if n<=1:

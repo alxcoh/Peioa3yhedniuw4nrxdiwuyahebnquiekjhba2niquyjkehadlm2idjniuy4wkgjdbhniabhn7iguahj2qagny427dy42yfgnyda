@@ -10,7 +10,7 @@ from simTest import *
 #Colors
 scoreL=0
 scoreR=0
-pause=False
+pause=True
 end=False
 crazyball=False #  :D
 CPU1=True
@@ -38,12 +38,12 @@ randomness=3 #if you actually want to play crazyball, set this at 4-6 for regula
 crazyDelay=5 #how often velocity changes in crazyball
 FPS=60
 fpsClock=pygame.time.Clock()
-paddleHeight=[1000, 150]
+paddleHeight=[150, 150]
 global passy
 passy=True
 paddleY=[350-(paddleHeight[0]/2), 350-(paddleHeight[1]/2)] # 0 is left, 1 is right
 
-paddleSpeed=[10, 15]
+paddleSpeed=[10, 3]
 
 paddleLeft=pygame.Rect(15, paddleY[0], 15, paddleHeight[0])
 paddleRight=pygame.Rect(970, paddleY[1], 15, paddleHeight[1])
